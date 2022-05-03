@@ -12,118 +12,73 @@
 </head>
 
 <body>
+
   <div class="navigation">
-    <div class="menuToggle"></div>
-    <ul> 
-      <li class="list" style="--clr:#f44336;">
-        <a href="#">
-          <span class="icon">
-            <ion-icon name="home-outline"></ion-icon>
-          </span>
-          <span class="text">Home</span>
-        </a>
-      </li>
-      <li class="list" style="--clr:#ffa117;">
-        <a href="#">
-          <span class="icon">
-            <ion-icon name="people-circle-outline"></ion-icon>
-          </span>
-          <span class="text">About</span>
-        </a>
-      </li>
-      <li class="list" style="--clr:#0fc70f;">
-        <a href="#">
-          <span class="icon">
-            <ion-icon name="settings-outline"></ion-icon>
-          </span>
-          <span class="text">Option</span>
-        </a>
-      </li>
-      <li class="list" style="--clr:#2196f3;">
-        <a href="#">
-          <span class="icon">
-            <ion-icon name="call-outline"></ion-icon>
-          </span>
-          <span class="text">Contact</span>
-        </a>
-      </li>
-      <li class="list" style="--clr:#ce36f4;">
-        <a href="#">
-          <span class="icon">
-            <ion-icon name="images-outline"></ion-icon>
-          </span>
-          <span class="text">Gallery</span>
-        </a>
-      </li>
-    </ul>
+      <div class="menuToggle"></div>
+      <ul> 
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="people-circle-outline"></ion-icon>
+            </span>
+            <span class="text">About</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="settings-outline"></ion-icon>
+            </span>
+            <span class="text">Option</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </span>
+            <span class="text">Contact</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="images-outline"></ion-icon>
+            </span>
+            <span class="text">Gallery</span>
+          </a>
+        </li>
+      </ul>
   </div>
 
-  <main id="top">
-    <header>
+  <header>
+    <div class="logo">
+      <img src="./assets/img/logo-taza.png" alt="logo taza" />
+    </div>
 
-      <div class="principalWrapper">
-        <div class="logo">
-          <img src="./assets/img/logo-taza.png" alt="logo taza" />
-        </div>
-
-          <div class="dropdown-menu">
-            <div class="container-icons">
-
-              <div class="btn">
-                <img src="./assets/img/left_arrow.png" alt="menu mobile" />
-              </div>
-              <a href="#cartList">
-                <div class="cart-icon">
-                  <img src="./assets/img/cart.svg" alt="cart" />
-                </div>
-              </a>
-            </div>
-            
-            <ul class="dropdown-menu-end">
-              <li><a href="#about">Acerca de nosotros</a></li>
-              <li><a href="#description">Nuestra visión</a></li>
-              <li><a href="#listProducts">Productos</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- -- MOBILE?? -- -->
-        <!-- <nav>
-          <ul>
-            <li><a href="#about">Acerca de nosotros</a></li>
-            <li><a href="#description">Nuestra visión</a></li>
-            <li><a href="#listProducts">Productos</a></li>
-            <li>
-              <a href="#cartList">
-                <div id="cart">
-                  <img src="./assets/img/cart.svg" alt="cart" />
-                  <span id="totalItems"></span>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </nav> -->
-      </div>
-
-
-
-    <section class="about" id="about">
-      <div class="principalWrapper">
+    <section class="home" id="home">
         <div class="aboutContent">
           <h1>La hora de la felicidad!</h1>
           <p>
             Ya se desayunar, tomarte un pausa o darte un gusto.
           </p>
-          <a href="#listProductos">Quiero Pedir!</a>
-        </div>
-        <div class="aboutContent">
-          <div>
-            <img src="" alt="" />
+          <div class="btn">
+            <a href="#listProductos">Quiero Pedir!</a>
           </div>
         </div>
       </div>
     </section>
   </header>
+
+
     <section id="description" class="description">
       <div class="principalWrapper">
         <div>

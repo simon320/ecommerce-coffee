@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -43,12 +44,16 @@ main {
   z-index: 1;
 }
 
+body {
+  background: #fbfbfb;
+}
+
 .navigation {
   position: fixed;
   z-index: 1;
   inset: 20px 0 20px 20px;
   width: 75px;
-  background: #e5e3e3;
+  background: #e0dad3;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   display: -webkit-box;
@@ -154,8 +159,9 @@ main {
 }
 
 .navigation.open ul li.active .icon {
-  -webkit-transform: translateX(130px);
-          transform: translateX(130px);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background: transparent;
 }
 
 .navigation ul li a {
@@ -187,22 +193,7 @@ main {
 
 .navigation ul li.active a .icon {
   color: #fff;
-  background-color: var(--clr);
-}
-
-.navigation ul li a .icon::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--clr);
-  -webkit-filter: blur(8px);
-          filter: blur(8px);
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  background-color: #e85e56;
 }
 
 .navigation ul li.active a .icon::before {
@@ -231,8 +222,21 @@ main {
   visibility: visible;
 }
 
+.navigation.open ul li.active {
+  opacity: 1;
+  visibility: visible;
+  background: #494949;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.navigation.open ul li.active a .text {
+  color: #fff;
+}
+
 .navigation ul li.active a .text {
-  color: var(--clr);
+  color: #232323;
+  font-size: 1.5rem;
 }
 
 header {
@@ -248,65 +252,45 @@ header {
           flex-direction: column;
 }
 
-header .principalWrapper {
+header .logo {
+  width: 4.5rem;
+  margin: 1rem;
+}
+
+header section {
+  width: 80%;
+  margin: 1rem;
+}
+
+header section h1 {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 3.5rem;
+  color: #494949;
+}
+
+header section p {
+  font-size: 1.2rem;
+}
+
+header section .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 1.3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 9rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  background: #494949;
+  text-align: center;
 }
 
-header .principalWrapper .logo {
-  width: 4rem;
-  height: auto;
-  margin-top: 1.1rem;
-}
-
-header .principalWrapper .btn {
-  width: 3rem;
-  height: auto;
-  background: transparent;
-  border: none;
-  color: aqua;
-}
-
-header .principalWrapper .dropdown-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 15rem;
-  height: 100vh;
-  background: #acaaaa;
-}
-
-header .principalWrapper .dropdown-menu .container-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 2.5rem 1rem 0 0;
-}
-
-header .principalWrapper .dropdown-menu .cart-icon {
-  width: 2.5rem;
-  height: 3rem;
-  margin-top: 0.2rem;
-}
-
-header .principalWrapper .dropdown-menu a {
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 4rem;
-  color: #5b2703;
+header section .btn a {
+  color: #e0dad3;
 }
 
 .description {
@@ -363,7 +347,7 @@ header .principalWrapper .dropdown-menu a {
 .description div h2 {
   font-size: 3.5rem;
   text-transform: uppercase;
-  color: #f7de82;
+  color: #e85e56;
 }
 
 @media (max-width: 1200px) {
@@ -587,7 +571,7 @@ header .principalWrapper .dropdown-menu a {
 }
 
 .listProducts ul li button {
-  background: #f7de82;
+  background: #e85e56;
   color: #000000;
   text-transform: uppercase;
   padding: 0.8rem 4rem;
@@ -774,7 +758,7 @@ header .principalWrapper .dropdown-menu a {
 }
 
 .cartList .cart-wrapper button {
-  background: #f7de82;
+  background: #e85e56;
   font-weight: 700;
   font-size: 2rem;
   text-transform: uppercase;
@@ -813,7 +797,7 @@ header .principalWrapper .dropdown-menu a {
 }
 
 button {
-  background: #f7de82;
+  background: #e85e56;
   font-weight: 700;
   font-size: 2rem;
   text-transform: uppercase;
