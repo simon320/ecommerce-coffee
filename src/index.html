@@ -22,19 +22,18 @@
         </a>
       </li>
       <li class="list">
-        <a href="#description">
+        <a href="#listProducts">
           <span class="icon">
-            <ion-icon name="people-circle-outline"></ion-icon>
-          </span>
-          <span class="text">About</span>
+            <ion-icon name="book-outline"></ion-icon>          </span>
+          <span class="text">Menu</span>
         </a>
       </li>
       <li class="list">
         <a href="#">
           <span class="icon">
-            <ion-icon name="settings-outline"></ion-icon>
+            <ion-icon name="bag-outline"></ion-icon>
           </span>
-          <span class="text">Option</span>
+          <span class="text">Cart</span>
         </a>
       </li>
       <li class="list">
@@ -48,49 +47,50 @@
       <li class="list">
         <a href="#">
           <span class="icon">
-            <ion-icon name="cart-outline"></ion-icon>
+            <ion-icon name="settings-outline"></ion-icon>
           </span>
-          <span class="text">Cart</span>
+          <span class="text">Option</span>
         </a>
       </li>
     </ul>
   </div>
   
   <header>
-    <div class="container">
-      <div class="logo">
+
+      <!-- <div class="logo">
         <img src="./assets/img/logo-taza.png" alt="logo taza" />
         <span>CoffeeOff</span>
       </div>
-      <input type="text">
+      <input type="text"> -->
       
-      <section class="home" id="home">
 
-          <h1>La hora de la felicidad!</h1>
+      <section class="home" id="home">
+          <h1 id="header">La hora de la felicidad!</h1>
           <p>
-            Ya se desayunar, tomarte un pausa o darte un gusto.
+            Es el momento que te tomas una pausa.. <br>
+            Ya se desayunar, merendar o darte un gusto.
           </p>
           <div class="btn">
-            <a href="#listProductos">Quiero Pedir!</a>
+            <a href="#listProducts">Quiero Pedir!</a>
           </div>
-
       </section>
-    </div>
+
+
   </header>
 
   
     <section id="description" class="description">
       <div class="principalWrapper">
         <div>
-          <h2>No te quedes sin el tuyo!</h2>
-          <span>Para qué cazar pokemones? mejor pedí tu favorito</span>
+          <h2>¿Como pedir?</h2>
+          <span>Mira nuestra carta...</span>
         </div>
         <ul>
           <li>
             <div>
               <img src="./assets/img/info-icon-1.png" alt="info" />
             </div>
-            <p>Elegís el poke de la lista...</p>
+            <p>Seleciona el o los productos...</p>
           </li>
           <li>
             <div>
@@ -111,19 +111,17 @@
         </ul>
       </div>
     </section>
+
     <section class="listProducts" id="listProducts">
       <div class="principalWrapper">
-        <h2>Acá tenés todos los disponibles</h2>
+        <h2>Acá tenés la carta <br>Una amplia variedad</h2>
         <ul id="list-products">
           <li>
             <div>
-              <img src="./assets/img/balbasaur.png" alt="bulbasaur" />
+              <img src="./assets/img/medialunas.jpg" alt="bulbasaur" />
             </div>
-            <span>Bulbasaur</span>
+            <span>Media Lunas</span>
             <span>$125</span>
-            <button onclick="addProduct('bulbasaur', 125, 1)">
-              Comprar ya!
-            </button>
           </li>
           <li>
             <div>
@@ -131,9 +129,6 @@
             </div>
             <span>Squirtle</span>
             <span>$200</span>
-            <button onclick="addProduct('squirtle', 200, 1)">
-              Comprar ya!
-            </button>
           </li>
           <li>
             <div>
@@ -141,13 +136,14 @@
             </div>
             <span>Piplup</span>
             <span>$250</span>
-            <button onclick="addProduct('piplup', 250, 1)">
+            <button onclick="addProduct('bulbasaur', 125, 1)">
               Comprar ya!
             </button>
           </li>
         </ul>
       </div>
     </section>
+
     <section class="cartList" id="cartList">
       <div class="principalWrapper">
         <h2>Acá están tus elegidos!</h2>

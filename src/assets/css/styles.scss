@@ -1,5 +1,5 @@
 @import './variables/main';
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Ubuntu:wght@300;400;500;700&display=swap');
 @include resetStyles;
 
 ::-webkit-scrollbar {
@@ -11,6 +11,18 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+
+// ------------ ANIMATION ------------ //
+@keyframes headerMove {
+    0%{
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    // 50%{
+    //     transform: translateX(-150px);
+    // }
+}
+
 
 // ------------ NAVBAR ------------ //
 
@@ -228,10 +240,8 @@ header {
     width: 100vw;
     display: flex;
     flex-direction: column;
-
-    .container {
-        height: 100%;
-        backdrop-filter: blur(1.5px);
+    background-image: url(../img/coffee1b.jpg);
+    background-size: cover;
         
         .logo {
             display: flex;
@@ -261,30 +271,40 @@ header {
         }
         
         section {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 100%;
-            height: auto;
+            width: 40%;
+            height: 100%;
             padding-top: 350px;
+            background: #000000;
             
             h1 {
-                font-size: 2.5rem;
-                color: #733727;
-                letter-spacing: 0.1rem; 
+                position: absolute;
+                font-family: 'Koulen', cursive;
+                font-size: 4.5rem;
+                top: 0;
+                left: 0;
+                margin: 1rem;
+                color: #e4e4e4;
+                letter-spacing: 0.3rem; 
+                line-height: 6rem;
             }
 
             p {
+                margin: 0 1rem;
                 font-size: 1.2rem;
                 font-weight: 600;
-                color: #2c2929;
+                color: #7e7a7a;
             }
             
             .btn {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 80%;
+                margin: 1.5rem auto;
+                width: 90%;
                 height: 3.5rem;
                 border-radius: 2rem;
                 background: #733727;
@@ -298,7 +318,7 @@ header {
             }
         
         }
-    } 
+     
 }
 
 
@@ -308,7 +328,7 @@ header {
 
 .description {
     @include orderFlex(column, center, center);
-    background: $main-blue;
+    background: #242221;
     padding: 8rem 0;
 
     .principalWrapper {
@@ -322,7 +342,7 @@ header {
         h2 {
             font-size: 3.5rem;
             text-transform: uppercase;
-            color:$main-orange;
+            color: #e4842b;
 
             @media(max-width: 1200px) {
                 font-size: 10vw;
@@ -426,7 +446,7 @@ header {
 
             span {
                 &:first-of-type {
-                    color: $main-blue;
+                    color: black;
                     text-transform: uppercase;
                     font-size: 1.4rem;
                     margin-top: 1.9rem;
@@ -437,7 +457,7 @@ header {
                 }
 
                 &:last-of-type {
-                    color: $main-blue;
+                    color: black;
                     text-transform: uppercase;
                     font-size: 2.5rem;
                     font-weight: 700;

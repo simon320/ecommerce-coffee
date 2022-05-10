@@ -76,4 +76,34 @@ function activeList() {
 list.forEach((item) => 
 item.addEventListener('click', activeList))
 
-// -------  NAVBAR ------- //
+
+
+// -------  ANIMATION ------- //
+
+window.addEventListener('scroll', function(){
+  // let animationHeader = document.getElementById('header');
+  // let positionHeader = animationHeader.getBoundingClientRect().top;
+  let animationHeader = document.getElementById('home');
+  let windowPositionHeader = window.scrollY;
+
+  if(windowPositionHeader === 0){
+    animationHeader.style.animation = 'headerMove 1s ease-out';
+  }
+})
+
+window.onscroll = function() {
+  console.log("Vertical: " + window.scrollY);
+  console.log("Horizontal: " + window.scrollX);
+  
+  window.addEventListener('scroll', function(){
+    // let animationHeader = document.getElementById('header');
+    // let positionHeader = animationHeader.getBoundingClientRect().top;
+    let animationHeader = document.getElementById('home');
+    let windowPositionHeader = window.scrollY;
+  
+    if(windowPositionHeader === 0){
+      animationHeader.style.animation = 'headerMove 1s ease-out';
+    }
+  })
+};
+

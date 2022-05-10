@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Ubuntu:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +52,22 @@ body {
   background: #fbfbfb;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+@-webkit-keyframes headerMove {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+}
+
+@keyframes headerMove {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
 }
 
 .navigation {
@@ -134,15 +150,11 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-image: url(../img/coffee1b.jpg);
+  background-size: cover;
 }
 
-header .container {
-  height: 100%;
-  -webkit-backdrop-filter: blur(1.5px);
-          backdrop-filter: blur(1.5px);
-}
-
-header .container .logo {
+header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,18 +165,18 @@ header .container .logo {
   margin: 1rem;
 }
 
-header .container .logo img {
+header .logo img {
   width: 1.8rem;
 }
 
-header .container .logo span {
+header .logo span {
   margin-top: 8px;
   margin-left: 5px;
   color: #733727;
   font-weight: 600;
 }
 
-header .container input {
+header input {
   width: 80%;
   height: 35px;
   margin: 0 10%;
@@ -174,7 +186,8 @@ header .container input {
           box-shadow: 1px 2px 5px #494949;
 }
 
-header .container section {
+header section {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,24 +198,32 @@ header .container section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: auto;
+  width: 40%;
+  height: 100%;
   padding-top: 350px;
+  background: #000000;
 }
 
-header .container section h1 {
-  font-size: 2.5rem;
-  color: #733727;
-  letter-spacing: 0.1rem;
+header section h1 {
+  position: absolute;
+  font-family: 'Koulen', cursive;
+  font-size: 4.5rem;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+  color: #e4e4e4;
+  letter-spacing: 0.3rem;
+  line-height: 6rem;
 }
 
-header .container section p {
+header section p {
+  margin: 0 1rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #2c2929;
+  color: #7e7a7a;
 }
 
-header .container section .btn {
+header section .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,14 +233,15 @@ header .container section .btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
+  margin: 1.5rem auto;
+  width: 90%;
   height: 3.5rem;
   border-radius: 2rem;
   background: #733727;
   text-align: center;
 }
 
-header .container section .btn a {
+header section .btn a {
   color: #e0dad3;
   width: 100%;
   height: auto;
@@ -239,7 +261,7 @@ header .container section .btn a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #0c4ea2;
+  background: #242221;
   padding: 8rem 0;
 }
 
@@ -279,7 +301,7 @@ header .container section .btn a {
 .description div h2 {
   font-size: 3.5rem;
   text-transform: uppercase;
-  color: #e85e56;
+  color: #e4842b;
 }
 
 @media (max-width: 1200px) {
@@ -482,7 +504,7 @@ header .container section .btn a {
 }
 
 .listProducts ul li span:first-of-type {
-  color: #0c4ea2;
+  color: black;
   text-transform: uppercase;
   font-size: 1.4rem;
   margin-top: 1.9rem;
@@ -495,7 +517,7 @@ header .container section .btn a {
 }
 
 .listProducts ul li span:last-of-type {
-  color: #0c4ea2;
+  color: black;
   text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: 700;
