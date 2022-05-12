@@ -396,9 +396,6 @@ header section .btn a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #ffffff;
-  padding: 8rem 0;
-  text-align: center;
 }
 
 .listProducts .principalWrapper {
@@ -415,226 +412,20 @@ header section .btn a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 80%;
 }
 
 .listProducts h2 {
   font-size: 3.5rem;
-  color: #0c4ea2;
+  color: #e4842b;
 }
 
-.listProducts ul {
+.listProducts article {
   width: 100%;
-  margin-top: 7rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  border-top: 1px solid #242221;
 }
 
-@media (max-width: 1200px) {
-  .listProducts ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.listProducts ul li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 270px;
-          flex: 0 0 270px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #ffffff;
-  border-radius: 3rem;
-  padding: 2.5rem;
-  margin-bottom: 5rem;
-  -webkit-box-shadow: 2px 0px 17px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 0px 17px 2px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
-@media (max-width: 1200px) {
-  .listProducts ul li {
-    width: 400px;
-  }
-}
-
-@media (max-width: 575px) {
-  .listProducts ul li {
-    width: 300px;
-  }
-}
-
-.listProducts ul li div {
-  width: 14rem;
-  height: auto;
-}
-
-.listProducts ul li span:first-of-type {
-  color: black;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  margin-top: 1.9rem;
-}
-
-@media (max-width: 1200px) {
-  .listProducts ul li span:first-of-type {
-    font-size: 7vw;
-  }
-}
-
-.listProducts ul li span:last-of-type {
-  color: black;
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 2rem 0;
-}
-
-.listProducts ul li button {
-  background: #e85e56;
-  color: #000000;
-  text-transform: uppercase;
-  padding: 0.8rem 4rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  font-family: 'Lato', sans-serif;
-  border: none;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
-.listProducts ul li button.disabled {
-  background: #f3f3f3;
-  color: #ffffff;
-  cursor: no-drop;
-}
-
-.listProducts ul li .outStock {
-  background: #f01919;
-  color: #ffffff;
-  position: absolute;
-  top: 1rem;
-  z-index: 0;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  padding: 0.8rem 0;
-}
-
-.cartList {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 8rem 0;
-  text-align: center;
-  background: #f3f3f3;
-  position: relative;
-}
-
-.cartList #totalItems {
-  position: absolute;
-  top: 0;
-  background: #f01919;
-  color: #ffffff;
-}
-
-.cartList .principalWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.cartList h2 {
-  font-size: 3.5rem;
-  color: #0c4ea2;
-}
-
-@media (max-width: 1200px) {
-  .cartList h2 {
-    font-size: 10vw;
-  }
-}
-
-.cartList p {
-  font-size: 1.5rem;
-  color: #0c4ea2;
-  margin: 1.5rem 0 2rem 0;
-}
-
-@media (max-width: 1200px) {
-  .cartList p {
-    font-size: 7vw;
-  }
-}
-
-.cartList .cart-wrapper {
-  width: 70%;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 1rem;
-  color: #0c4ea2;
-}
-
-@media (max-width: 1200px) {
-  .cartList .cart-wrapper {
-    width: 90%;
-  }
-}
-
-.cartList .cart-wrapper .cart-item {
+.listProducts .container-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -644,132 +435,18 @@ header section .btn a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 0.5rem;
+  padding-top: 2rem;
 }
 
-.cartList .cart-wrapper .cart-item span {
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-@media (max-width: 1200px) {
-  .cartList .cart-wrapper .cart-item span {
-    font-size: 0.8rem;
-  }
-}
-
-.cartList .cart-wrapper .cart-item-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #0c4ea2;
-}
-
-.cartList .cart-wrapper .cart-item-content span {
-  text-transform: capitalize;
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-left: 1rem;
-}
-
-.cartList .cart-wrapper .item-img {
-  width: 50px;
-}
-
-.cartList .cart-wrapper .total-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  font-size: 1.6rem;
-  border-top: 1px solid #0c4ea2;
-  margin-top: 2rem;
-  padding-top: 1rem;
-}
-
-.cartList .cart-wrapper .total-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.cartList .cart-wrapper button {
-  background: #e85e56;
-  font-weight: 700;
-  font-size: 2rem;
-  text-transform: uppercase;
+.listProducts .container-items .btn-details {
   border: none;
-  border-radius: 1rem;
-  padding: 1rem 2rem;
-  margin-top: 2.5rem;
+  width: 65%;
+  height: 35px;
+  text-align: start;
 }
 
-@media (max-width: 1200px) {
-  .cartList .cart-wrapper button {
-    font-size: 5vw;
-  }
-}
-
-.total-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  font-size: 1.6rem;
-  border-top: 1px solid #0c4ea2;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-button {
-  background: #e85e56;
-  font-weight: 700;
-  font-size: 2rem;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 1rem;
-  padding: 1rem 2rem;
-  margin-top: 2.5rem;
-}
-
-@media (max-width: 1200px) {
-  button {
-    font-size: 5vw;
-  }
-}
-
-.emptyProductsMessage {
-  font-weight: 700;
-  font-size: 1.6rem;
+.listProducts .container-items .hide {
+  display: none;
 }
 
 footer {

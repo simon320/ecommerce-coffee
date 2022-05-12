@@ -107,3 +107,61 @@ window.onscroll = function() {
   })
 };
 
+
+
+
+
+// -------  CAFETERIA ------- //
+// -------  CLASICOs ------- //
+const classics = document.getElementById('classics');
+const btnClassics = document.getElementById('btnClassics');
+const openClassics = document.getElementById('openClassics');
+const closeClassics = document.getElementById('closeClassics');
+
+btnClassics.addEventListener('click', () =>{
+  openClassics.classList.toggle("hide");
+  closeClassics.classList.toggle("hide");
+  classics.innerHTML = 
+  closeClassics.classList.contains("hide") ?
+  `
+    <ul>
+      <li>
+        Cafe
+        <button>Agregar</button>
+      </li>
+      <li>Lagrima</li>
+      <li>Cafe con leche</li>
+      <li>Cortado</li>
+      <li>Te en saquito</li>
+      <li>Te en Hebras</li>
+    </ul>
+  `
+  : ' ';
+})
+
+
+
+// -------  ESPECIALEs ------- //
+const especials = document.getElementById('especials');
+const btnEspecials = document.getElementById('btnEspecials');
+const openEspecials = document.getElementById('openEspecials');
+const closeEspecials = document.getElementById('closeEspecials');
+
+btnEspecials.addEventListener('click', () =>{
+  openEspecials.classList.toggle("hide");
+  closeEspecials.classList.toggle("hide");
+  especials.innerHTML = 
+  closeEspecials.classList.contains("hide") ?
+  `
+    <ul>
+      <li>Submarino</li>
+      <li>Chocolatada cindor</li>
+      <li>Chocolatada vegana</li>
+      <li>Capuccino</li>
+      <li>Cortado</li>
+      <li>Moka</li>
+    </ul>
+  `
+  : '';
+})
+
