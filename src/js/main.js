@@ -121,24 +121,27 @@ const closeClassics = document.getElementById('closeClassics');
 btnClassics.addEventListener('click', () =>{
   openClassics.classList.toggle("hide");
   closeClassics.classList.toggle("hide");
-  classics.innerHTML = 
-  closeClassics.classList.contains("hide") ?
-  `
-    <ul>
-      <li>
-        Cafe
-        <button>Agregar</button>
-      </li>
-      <li>Lagrima</li>
-      <li>Cafe con leche</li>
-      <li>Cortado</li>
-      <li>Te en saquito</li>
-      <li>Te en Hebras</li>
-    </ul>
-  `
-  : ' ';
+  classics.classList.toggle('up-hide');
+  const addCoffee = document.getElementById('addCoffee');
+  addCoffee.addEventListener('click', () => {
+    console.log("Holaaa");
+  })
+  // classics.innerHTML = 
+  // closeClassics.classList.contains("hide") ?
+  // `
+  //   <ul>
+  //     <li class="li-products">
+  //       Cafe
+  //     </li>
+  //     <li class="li-products">Lagrima</li>
+  //     <li class="li-products">Cafe con leche</li>
+  //     <li>Cortado</li>
+  //     <li>Te en saquito</li>
+  //     <li>Te en Hebras</li>
+  //   </ul>
+  // `
+  // : ' ';
 })
-
 
 
 // -------  ESPECIALEs ------- //

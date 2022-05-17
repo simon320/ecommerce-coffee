@@ -23,6 +23,14 @@ body {
     // }
 }
 
+@keyframes showDetails {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 120px;
+    }
+}
 
 // ------------ NAVBAR ------------ //
 
@@ -436,8 +444,19 @@ header {
             display: none;
         }
 
+        
     }
 
+    .container-details {
+        overflow-y: hidden;
+        height: 0;
+        width: 100%;
+        // transition: all 3s;
+    }
+
+    .up-hide {
+        animation: showDetails 1.2s normal forwards;
+    }
 
 }
 
