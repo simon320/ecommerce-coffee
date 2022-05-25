@@ -31,16 +31,16 @@ const productsList = () => {
             <div class="cart-item">
                 <div class="cart-item-content">
                 <span>${product.product}</span>
-                <span>Cantidad deseada: ${product.count}</span>
-                
-                    <span> $ ${product.price}</span>
-                </div>
-            </div>
-        `;
+                <span> $ ${product.price}</span>
+                <span>x ${product.count}</span>
+
+                  </div>
+              </div>
+            `
   });
 };
 
-const addProduct = (product, price, count) => {
+const addProduct = (product, price, count, size) => {
 
     for (const item in products) {
       
@@ -53,7 +53,7 @@ const addProduct = (product, price, count) => {
         }
     }
 
-    products.push({ product, price, count });
+    products.push({ product, price, count, size });
     setCount();
     totalPrice();
     productsList();
@@ -80,32 +80,32 @@ item.addEventListener('click', activeList))
 
 // -------  ANIMATION ------- //
 
-window.addEventListener('scroll', function(){
-  // let animationHeader = document.getElementById('header');
-  // let positionHeader = animationHeader.getBoundingClientRect().top;
-  let animationHeader = document.getElementById('home');
-  let windowPositionHeader = window.scrollY;
+// window.addEventListener('scroll', function(){
+//   // let animationHeader = document.getElementById('header');
+//   // let positionHeader = animationHeader.getBoundingClientRect().top;
+//   let animationHeader = document.getElementById('home');
+//   let windowPositionHeader = window.scrollY;
 
-  if(windowPositionHeader === 0){
-    animationHeader.style.animation = 'headerMove 1s ease-out';
-  }
-})
+//   if(windowPositionHeader === 0){
+//     animationHeader.style.animation = 'headerMove 1s ease-out';
+//   }
+// })
 
-window.onscroll = function() {
-  console.log("Vertical: " + window.scrollY);
-  console.log("Horizontal: " + window.scrollX);
+// window.onscroll = function() {
+//   console.log("Vertical: " + window.scrollY);
+//   console.log("Horizontal: " + window.scrollX);
   
-  window.addEventListener('scroll', function(){
-    // let animationHeader = document.getElementById('header');
-    // let positionHeader = animationHeader.getBoundingClientRect().top;
-    let animationHeader = document.getElementById('home');
-    let windowPositionHeader = window.scrollY;
+//   window.addEventListener('scroll', function(){
+//     // let animationHeader = document.getElementById('header');
+//     // let positionHeader = animationHeader.getBoundingClientRect().top;
+//     let animationHeader = document.getElementById('home');
+//     let windowPositionHeader = window.scrollY;
   
-    if(windowPositionHeader === 0){
-      animationHeader.style.animation = 'headerMove 1s ease-out';
-    }
-  })
-};
+//     if(windowPositionHeader === 0){
+//       animationHeader.style.animation = 'headerMove 1s ease-out';
+//     }
+//   })
+// };
 
 
 
@@ -114,34 +114,32 @@ window.onscroll = function() {
 // -------  CAFETERIA ------- //
 // -------  CLASICOs ------- //
 const classics = document.getElementById('classics');
-const btnClassics = document.getElementById('btnClassics');
 const openClassics = document.getElementById('openClassics');
 const closeClassics = document.getElementById('closeClassics');
+const btnClassics = document.getElementById('btnClassics');
 
 btnClassics.addEventListener('click', () =>{
-  openClassics.classList.toggle("hide");
-  closeClassics.classList.toggle("hide");
+  openClassics.classList.toggle("hide"); // ALTERNA ENTRE LAS FLECHAS DEL MENU.
+  closeClassics.classList.toggle("hide"); // ALTERNA ENTRE LAS FLECHAS DEL MENU.
+
   classics.classList.toggle('up-hide');
-  const addCoffee = document.getElementById('addCoffee');
-  addCoffee.addEventListener('click', () => {
-    console.log("Holaaa");
-  })
-  // classics.innerHTML = 
-  // closeClassics.classList.contains("hide") ?
-  // `
-  //   <ul>
-  //     <li class="li-products">
-  //       Cafe
-  //     </li>
-  //     <li class="li-products">Lagrima</li>
-  //     <li class="li-products">Cafe con leche</li>
-  //     <li>Cortado</li>
-  //     <li>Te en saquito</li>
-  //     <li>Te en Hebras</li>
-  //   </ul>
-  // `
-  // : ' ';
-})
+
+});
+
+
+// -------  MENU-SIZEs ------- //
+const showSizes = (itemSize, openItem, closeItem) => {
+
+  const itemSizes = document.getElementById(`${itemSize}`);
+  const openItems = document.getElementById(`${openItem}`);
+  const closeItems = document.getElementById(`${closeItem}`);
+  
+    openItems.classList.toggle("hide"); // ALTERNA ENTRE LAS FLECHAS DEL MENU.
+    closeItems.classList.toggle("hide"); // ALTERNA ENTRE LAS FLECHAS DEL MENU.
+  
+    itemSizes.classList.toggle('up-hide'); // DESPLIEGA LAS OPCIONES DE TAMAÑO.
+}
+
 
 
 // -------  ESPECIALEs ------- //
