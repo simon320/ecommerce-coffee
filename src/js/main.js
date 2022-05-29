@@ -137,7 +137,7 @@ const showSizes = (itemSize, openItem, closeItem) => {
     openItems.classList.toggle("hide"); // ALTERNA ENTRE LAS FLECHAS DEL MENU.
     closeItems.classList.toggle("hide"); // ALTERNA ENTRE LAS FLECHAS DEL MENU.
   
-    itemSizes.classList.toggle('up-hide'); // DESPLIEGA LAS OPCIONES DE TAMAÑO.
+    itemSizes.classList.toggle('left-hide'); // DESPLIEGA LAS OPCIONES DE TAMAÑO.
 }
 
 

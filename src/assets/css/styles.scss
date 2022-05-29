@@ -36,6 +36,15 @@ body {
     }
 }
 
+
+@keyframes showDetails2 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 50vw;
+    }
+}
 // ------------ NAVBAR ------------ //
 
 // .navigation {
@@ -454,6 +463,7 @@ header {
         width: 100%;
         
         .container-size {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -479,12 +489,15 @@ header {
             }
 
             .container-size-details {
-                width: 100%;
-                height: 0;
+                position: absolute;
+                background: #f0efef;
+                width: 0;
+                height: 550px;
                 overflow-y: hidden;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                z-index: 1;
 
                 .li-size {
                     display: flex;
@@ -506,6 +519,10 @@ header {
 
     .up-hide {
         animation: showDetails 1.2s normal forwards;
+    }
+
+    .left-hide {
+        animation: showDetails2 1.2s normal forwards;
     }
 
 }
