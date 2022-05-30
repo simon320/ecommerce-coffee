@@ -126,43 +126,30 @@ btnClassics.addEventListener('click', () =>{
 
 });
 
+// -------  SPECIALs ------- //
+const specials = document.getElementById('specials');
+const btnSpecials = document.getElementById('btnSpecials');
+const openSpecials = document.getElementById('openSpecials');
+const closeSpecials = document.getElementById('closeSpecials');
+
+btnSpecials.addEventListener('click', () =>{
+  openSpecials.classList.toggle("hide");
+  closeSpecials.classList.toggle("hide");
+
+  specials.classList.toggle('up-hide');
+})
+// -------  ESPECIALs ------- //
 
 // -------  MENU-SIZEs ------- //
-const showSizes = (itemSize, openItem, closeItem) => {
 
+const showSizes = (itemSize) => {
   const itemSizes = document.getElementById(`${itemSize}`);
-  const openItems = document.getElementById(`${openItem}`);
-  const closeItems = document.getElementById(`${closeItem}`);
-  
-    openItems.classList.toggle("hide"); // ALTERNA ENTRE LAS FLECHAS DEL MENU.
-    closeItems.classList.toggle("hide"); // ALTERNA ENTRE LAS FLECHAS DEL MENU.
-  
-    itemSizes.classList.toggle('left-hide'); // DESPLIEGA LAS OPCIONES DE TAMAÑO.
+    itemSizes.classList.remove('right-hide'); // DESPLIEGA LAS OPCIONES DE TAMAÑO.
+    itemSizes.classList.add('right-show'); // DESPLIEGA LAS OPCIONES DE TAMAÑO. 
 }
 
-
-
-// -------  ESPECIALEs ------- //
-const especials = document.getElementById('especials');
-const btnEspecials = document.getElementById('btnEspecials');
-const openEspecials = document.getElementById('openEspecials');
-const closeEspecials = document.getElementById('closeEspecials');
-
-btnEspecials.addEventListener('click', () =>{
-  openEspecials.classList.toggle("hide");
-  closeEspecials.classList.toggle("hide");
-  especials.innerHTML = 
-  closeEspecials.classList.contains("hide") ?
-  `
-    <ul>
-      <li>Submarino</li>
-      <li>Chocolatada cindor</li>
-      <li>Chocolatada vegana</li>
-      <li>Capuccino</li>
-      <li>Cortado</li>
-      <li>Moka</li>
-    </ul>
-  `
-  : '';
-})
-
+const closeDetails = (itemSize) => {
+      const item = document.getElementById(`${itemSize}`);
+        item.classList.remove('right-show'); // DESPLIEGA LAS OPCIONES DE TAMAÑO.
+        item.classList.add('right-hide'); // DESPLIEGA LAS OPCIONES DE TAMAÑO.
+}

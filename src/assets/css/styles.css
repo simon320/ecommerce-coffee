@@ -79,7 +79,7 @@ body {
     height: 0;
   }
   100% {
-    height: auto;
+    height: 325px;
   }
 }
 
@@ -88,25 +88,43 @@ body {
     height: 0;
   }
   100% {
-    height: auto;
+    height: 325px;
   }
 }
 
 @-webkit-keyframes showDetails2 {
   0% {
-    width: 0;
+    left: calc(80vw);
   }
   100% {
-    width: 50vw;
+    left: 0;
   }
 }
 
 @keyframes showDetails2 {
   0% {
-    width: 0;
+    left: calc(80vw);
   }
   100% {
-    width: 50vw;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes hideDetails2 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(80vw);
+  }
+}
+
+@keyframes hideDetails2 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(80vw);
   }
 }
 
@@ -114,11 +132,9 @@ body {
   position: fixed;
   width: 100vw;
   height: 70px;
-  z-index: 1;
+  z-index: 100;
   bottom: 0px;
   background: black;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
 }
 
 .navigation .menuToggle {
@@ -430,9 +446,6 @@ header section .btn a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -446,9 +459,6 @@ header section .btn a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -456,11 +466,11 @@ header section .btn a {
 }
 
 .listProducts h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #e4842b;
 }
 
-.listProducts article {
+.listProducts .cafeteria {
   width: 100%;
   border-top: 1px solid #242221;
 }
@@ -488,13 +498,13 @@ header section .btn a {
 }
 
 .listProducts .container-details {
+  position: relative;
   overflow-y: hidden;
   height: 0;
   width: 100%;
 }
 
-.listProducts .container-details .container-size {
-  position: relative;
+.listProducts .container-details .container-coffee {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -507,18 +517,18 @@ header section .btn a {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 2px;
+  gap: 1px;
 }
 
-.listProducts .container-details .container-size button {
+.listProducts .container-details .container-coffee button {
   border: none;
 }
 
-.listProducts .container-details .container-size button span {
+.listProducts .container-details .container-coffee button span {
   font-weight: 700;
 }
 
-.listProducts .container-details .container-size .title-item {
+.listProducts .container-details .container-coffee .title-item {
   width: 100%;
   -ms-flex-preferred-size: 55px;
       flex-basis: 55px;
@@ -533,11 +543,44 @@ header section .btn a {
           justify-content: space-between;
 }
 
-.listProducts .container-details .container-size .container-size-details {
+.listProducts .container-details .container-coffee .container-size {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80vw;
+  height: 325px;
+  left: calc(80vw);
+}
+
+.listProducts .container-details .container-coffee .container-size .title {
+  position: absolute;
+  padding: 2rem;
+  bottom: 120px;
+  left: -189px;
+  text-align: center;
+  background: #e4842b;
+  z-index: 15;
+  width: 464px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.listProducts .container-details .container-coffee .container-size .title h3 {
+  display: inline;
+  text-align: center;
+}
+
+.listProducts .container-details .container-coffee .container-size .container-size-details {
   position: absolute;
   background: #f0efef;
-  width: 0;
-  height: 550px;
+  left: calc(86px);
+  padding-right: 45px;
+  width: 90%;
+  height: 325px;
   overflow-y: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -549,10 +592,21 @@ header section .btn a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 5;
 }
 
-.listProducts .container-details .container-size .container-size-details .li-size {
+.listProducts .container-details .container-coffee .container-size .container-size-details .btn-close {
+  position: relative;
+  z-index: 10;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 1px solid #000000;
+}
+
+.listProducts .container-details .container-coffee .container-size .container-size-details .li-size {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -567,10 +621,22 @@ header section .btn a {
   border-bottom: 1px solid #494949;
 }
 
-.listProducts .container-details .container-size .container-size-details .li-size button {
+.listProducts .container-details .container-coffee .container-size .container-size-details .li-size button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+
+.listProducts .food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80vw;
+  height: 150px;
+  overflow: hidden;
+  margin: 1rem;
+  border-radius: 10px;
+  background: #f0eeee;
 }
 
 .listProducts .up-hide {
@@ -578,9 +644,14 @@ header section .btn a {
           animation: showDetails 1.2s normal forwards;
 }
 
-.listProducts .left-hide {
-  -webkit-animation: showDetails2 1.2s normal forwards;
-          animation: showDetails2 1.2s normal forwards;
+.listProducts .right-show {
+  -webkit-animation: showDetails2 .5s normal forwards;
+          animation: showDetails2 .5s normal forwards;
+}
+
+.listProducts .right-hide {
+  -webkit-animation: hideDetails2 .5s normal forwards;
+          animation: hideDetails2 .5s normal forwards;
 }
 
 .cartList {
