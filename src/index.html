@@ -109,7 +109,7 @@
   <!-- PRODUCTs ------------------------------------------------------------------------>
     <section class="listProducts" id="listProducts">
       <div class="principalWrapper">
-        <h2>Acá tenés la carta <br>Una amplia variedad</h2>
+        <h2>Nuestros Productos</h2>
 
         <article class="cafeteria">
           <h3>Cafeteria</h3>
@@ -139,19 +139,22 @@
                   </div>
 
                   <ul class="container-size-details">
-                    <li>
+                    <li class="li-btn">
                       <button onclick="closeDetails('coffeeSize')" class="btn-close">X</button>
                     </li>
+                    
                     <li class="li-size">
                       <span>S</span>
                       <span>$150</span>
                       <button onclick="addProduct('Cafe chico', 150, 1)">+</button>
                     </li>
+                    <hr>
                     <li class="li-size">
                       <span>M</span>
                       <span>$180</span>
                       <button onclick="addProduct('Cafe mediano', 180, 1)">+</button>
                     </li>
+                    <hr>
                     <li class="li-size">
                       <span>XL</span>
                       <span>$200</span>
@@ -174,7 +177,7 @@
                   </div>
 
                   <ul class="container-size-details">
-                    <li>
+                    <li class="li-btn">
                       <button onclick="closeDetails('tearSize')" class="btn-close">X</button>
                     </li>
                     <li class="li-size">
@@ -209,7 +212,7 @@
                   </div>
 
                   <ul class="container-size-details">
-                    <li>
+                    <li class="li-btn">
                       <button onclick="closeDetails('coffeeMilkSize')" class="btn-close">X</button>
                     </li>
                     <li class="li-size">
@@ -244,7 +247,7 @@
                   </div>
 
                   <ul class="container-size-details">
-                    <li>
+                    <li class="li-btn">
                       <button onclick="closeDetails('coffeeCutSize')" class="btn-close">X</button>
                     </li>
                     <li class="li-size">
@@ -279,7 +282,7 @@
                   </div>
 
                   <ul class="container-size-details">
-                    <li>
+                    <li class="li-btn">
                       <button onclick="closeDetails('teaSize')" class="btn-close">X</button>
                     </li>
                     <li class="li-size">
@@ -312,7 +315,7 @@
                   </div>
 
                   <ul class="container-size-details">
-                    <li>
+                    <li class="li-btn">
                       <button onclick="closeDetails('teaStrandSize')" class="btn-close">X</button>
                     </li>
                     <li class="li-size">
@@ -398,16 +401,94 @@
         </article>
       </div>
 
-      <article class="food">
-        <div>
-          <img src="/src/assets/img/sandwich2.jpg" alt="">
+      <h3 class="title-article">Platos</h3>
+      <article class="food" onclick="addFood('BonjourMadameInfo', 'BonjourMadameImg', 'BonjourMadameBtn')">
+        <div class="container-img">
+          <img src="/src/assets/img/sandwich2.jpg" alt="" id="BonjourMadameImg">
         </div>
-        <div>
+        <div id="BonjourMadameInfo" class="flex-container">
           <h3>Bonjour madame</h3>
           <span>$630</span>
-          <p>jamón, provolone, extra queso gratinado y salsa bechamel. Cubierto con huevo.</p>
+          <p>Jamón, provolone, queso gratinado y salsa bechamel</p>
+        </div>
+        <div id="BonjourMadameBtn" class="hide-btn">
+          <button onclick="addProduct('Bonjour madame', 630, 1)">Agregar</button>
         </div>
       </article>
+
+      <article class="food" onclick="addFood('PancakesInfo', 'PancakesImg', 'PancakesBtn')">
+        <div class="container-img">
+          <img src="/src/assets/img/panqueque.jpg" alt="" id="PancakesImg">
+        </div>
+        <div id="PancakesInfo" class="flex-container">
+          <h3>Pancakes</h3>
+          <span>$810</span>
+          <p>Chocolate y dulce de leche</p>
+        </div>
+        <div id="PancakesBtn" class="hide-btn">
+          <button onclick="addProduct('Pancakes', 810, 1)">Agregar</button>
+        </div>
+      </article>
+
+      <article class="food" onclick="addFood('PancakesFitInfo', 'PancakesFitImg', 'PancakesFitBtn')">
+        <div class="container-img">
+          <img src="/src/assets/img/panqueque2.jpg" alt="" id="PancakesFitImg">
+        </div>
+        <div id="PancakesFitInfo" class="flex-container">
+          <h3>Pancakes Fit</h3>
+          <span>$810</span>
+          <p>Maza integral con yogurt y frutas</p>
+        </div>
+        <div id="PancakesFitBtn" class="hide-btn">
+          <button onclick="addProduct('Pancakes Fit', 770, 1)">Agregar</button>
+        </div>
+      </article>
+
+      <article class="food" onclick="addFood('TostadasFrancesasInfo', 'TostadasFrancesasImg', 'TostadasFrancesasBtn')">
+        <div class="container-img">
+          <img src="/src/assets/img/tostada.jpg" alt="" id="TostadasFrancesasImg">
+        </div>
+        <div id="TostadasFrancesasInfo" class="flex-container">
+          <h3>Tostadas francesas</h3>
+          <span>$810</span>
+          <p>Nutella y frutillas</p>
+        </div>
+        <div id="TostadasFrancesasBtn" class="hide-btn">
+          <button onclick="addProduct('Tostadas francesas', 810, 1)">Agregar</button>
+        </div>
+      </article>
+
+      <article class="food" onclick="addFood('EnglishMuffinInfo', 'EnglishMuffinImg', 'EnglishMuffinBtn')">
+        <div class="container-img">
+          <img src="/src/assets/img/sandwich3.jpg" alt="" id="EnglishMuffinImg">
+        </div>
+        <div id="EnglishMuffinInfo" class="flex-container">
+          <h3>English muffin</h3>
+          <span>$710</span>
+          <p>Con cheddar, huevo y panceta/lomito</p>
+        </div>
+        <div id="EnglishMuffinBtn" class="hide-btn">
+          <button onclick="addProduct('English muffin', 710, 1)">Agregar</button>
+        </div>
+      </article>
+
+      <article id="MontecristoContainer" class="food" onclick="addFood('MontecristoContainer','MontecristoInfo', 'MontecristoImg', 'MontecristoBtn', 'MontecristoaddBtn')">
+        <div class="container-img">
+          <img src="/src/assets/img/sandwich4.jpg" alt="" id="MontecristoImg">
+        </div>
+        <div id="MontecristoInfo" class="flex-container">
+          <h3>Montecristo</h3>
+          <span>$800</span>
+          <p>Tostadas francesas con polvorone y jamón</p>
+        </div>
+        <div id="MontecristoBtn" class="hide-btn">
+          <button id="MontecristoaddBtn" onclick="addProduct('Montecristo', 800, 1)">Agregar</button>
+          <span class="cross">X</span>
+        </div>
+      </article>
+
+
+
     </section>
 
 
@@ -417,8 +498,8 @@
         <h2>Este es tu pedido!</h2>
         <div class="cart-wrapper" id="cartWrapper">
           <div class="emptyProductsMessage">
-            ¿No tenés hambre?
             No elegiste nada aun...
+            ¿No tenés hambre?
           </div>
         </div>
         <div class="total-items" id="totalItems">

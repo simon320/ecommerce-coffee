@@ -7,11 +7,6 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
-* img {
-  width: 100%;
-  height: auto;
-}
-
 body {
   position: relative;
   width: 100vw;
@@ -42,6 +37,11 @@ main {
   right: 0;
   bottom: 0;
   z-index: 1;
+}
+
+.title-article {
+  font-size: 2rem;
+  margin: 2rem auto;
 }
 
 ::-webkit-scrollbar {
@@ -125,6 +125,106 @@ body {
   }
   100% {
     left: calc(80vw);
+  }
+}
+
+@-webkit-keyframes hideInfo {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes hideInfo {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes imgCover {
+  50% {
+    top: 0;
+  }
+  100% {
+    top: -30px;
+    -webkit-filter: blur(1.5px);
+            filter: blur(1.5px);
+  }
+}
+
+@keyframes imgCover {
+  50% {
+    top: 0;
+  }
+  100% {
+    top: -30px;
+    -webkit-filter: blur(1.5px);
+            filter: blur(1.5px);
+  }
+}
+
+@-webkit-keyframes aniBtn {
+  0% {
+    border: 1px solid #e4842b;
+  }
+  25% {
+    border: 3px solid #e4842b;
+  }
+  50% {
+    border: 6px solid #e4842b;
+  }
+  75% {
+    border: 3px solid #e4842b;
+  }
+  100% {
+    border: 1px solid #e4842b;
+  }
+}
+
+@keyframes aniBtn {
+  0% {
+    border: 1px solid #e4842b;
+  }
+  25% {
+    border: 3px solid #e4842b;
+  }
+  50% {
+    border: 6px solid #e4842b;
+  }
+  75% {
+    border: 3px solid #e4842b;
+  }
+  100% {
+    border: 1px solid #e4842b;
+  }
+}
+
+@-webkit-keyframes borderActive {
+  0% {
+    border: 1px solid #e4842b;
+  }
+  50% {
+    border: 2px solid #e4842b;
+  }
+  100% {
+    border: 3px solid #e4842b;
+  }
+}
+
+@keyframes borderActive {
+  0% {
+    border: 1px solid #e4842b;
+  }
+  50% {
+    border: 2px solid #e4842b;
+  }
+  100% {
+    border: 3px solid #e4842b;
   }
 }
 
@@ -292,7 +392,7 @@ header section .btn {
   margin: 1.5rem auto;
   width: 90%;
   padding: .8rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   background: #733727;
   text-align: center;
 }
@@ -449,6 +549,7 @@ header section .btn a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #f1eae6c9;
 }
 
 .listProducts .principalWrapper {
@@ -466,13 +567,19 @@ header section .btn a {
 }
 
 .listProducts h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #e4842b;
 }
 
 .listProducts .cafeteria {
   width: 100%;
   border-top: 1px solid #242221;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.listProducts .cafeteria h3 {
+  margin: 2rem auto;
 }
 
 .listProducts .container-items {
@@ -486,6 +593,7 @@ header section .btn a {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
+  font-size: 28px;
   color: #e0dad3;
   background: #242221;
 }
@@ -526,6 +634,7 @@ header section .btn a {
 
 .listProducts .container-details .container-coffee button span {
   font-weight: 700;
+  font-size: 18px;
 }
 
 .listProducts .container-details .container-coffee .title-item {
@@ -563,6 +672,7 @@ header section .btn a {
   left: -189px;
   text-align: center;
   background: #e4842b;
+  font-size: 28px;
   z-index: 15;
   width: 464px;
   -webkit-transform: rotate(-90deg);
@@ -576,7 +686,7 @@ header section .btn a {
 
 .listProducts .container-details .container-coffee .container-size .container-size-details {
   position: absolute;
-  background: #f0efef;
+  background: #ecebeb;
   left: calc(86px);
   padding-right: 45px;
   width: 90%;
@@ -592,51 +702,134 @@ header section .btn a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   z-index: 5;
 }
 
-.listProducts .container-details .container-coffee .container-size .container-size-details .btn-close {
+.listProducts .container-details .container-coffee .container-size .container-size-details .li-btn {
   position: relative;
-  z-index: 10;
-  padding: 1rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.listProducts .container-details .container-coffee .container-size .container-size-details .li-btn .btn-close {
+  margin: 0 2rem;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 1px solid #000000;
+  border: 3px solid #cccccc;
 }
 
 .listProducts .container-details .container-coffee .container-size .container-size-details .li-size {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
   padding: .5rem 0;
-  border-bottom: 1px solid #494949;
+  font-size: large;
+  font-weight: 600;
 }
 
 .listProducts .container-details .container-coffee .container-size .container-size-details .li-size button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  border: 3px solid #dbd9d9;
 }
 
 .listProducts .food {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 80vw;
-  height: 150px;
+  height: 180px;
   overflow: hidden;
   margin: 1rem;
+  border: 1px solid #e4842baf;
   border-radius: 10px;
   background: #f0eeee;
+  -webkit-box-shadow: 2px 2px 6px #7e7a7a;
+          box-shadow: 2px 2px 6px #7e7a7a;
+  -webkit-transition: 2s all;
+  transition: 2s all;
+}
+
+.listProducts .food .container-img {
+  width: 100%;
+}
+
+.listProducts .food .container-img img {
+  position: relative;
+  width: 100%;
+}
+
+.listProducts .food .flex-container {
+  max-width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow: hidden;
+  border-left: 1px solid #ff9f0f;
+}
+
+.listProducts .food .flex-container h3 {
+  text-align: center;
+}
+
+.listProducts .food .flex-container span {
+  color: #e4842b;
+  padding: 5px;
+}
+
+.listProducts .food .flex-container p {
+  font-size: .9rem;
+  padding: 5px;
+}
+
+.listProducts .food .btnAdd {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.listProducts .food .btnAdd button {
+  border: none;
+  background: #ff8c20;
+  border: #eeeeeeaf 1px solid;
+  color: #e0dad3;
+  font-size: large;
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem;
 }
 
 .listProducts .up-hide {
@@ -652,6 +845,48 @@ header section .btn a {
 .listProducts .right-hide {
   -webkit-animation: hideDetails2 .5s normal forwards;
           animation: hideDetails2 .5s normal forwards;
+}
+
+.listProducts .hide-info {
+  -webkit-animation: hideInfo .5s normal forwards;
+          animation: hideInfo .5s normal forwards;
+}
+
+.listProducts .full-img {
+  -webkit-animation: imgCover .5s normal forwards;
+          animation: imgCover .5s normal forwards;
+}
+
+.listProducts .show-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.listProducts .cross {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 2% 3%;
+  color: #e4842b85;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.listProducts .hide-btn {
+  display: none;
+  opacity: 0;
+}
+
+.listProducts .anim-btn {
+  -webkit-animation: aniBtn .5s normal forwards;
+          animation: aniBtn .5s normal forwards;
+}
+
+.listProducts .border-active {
+  -webkit-animation: borderActive .2s normal forwards;
+          animation: borderActive .2s normal forwards;
 }
 
 .cartList {

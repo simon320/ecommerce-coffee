@@ -153,3 +153,27 @@ const closeDetails = (itemSize) => {
         item.classList.remove('right-show'); // DESPLIEGA LAS OPCIONES DE TAMAÑO.
         item.classList.add('right-hide'); // DESPLIEGA LAS OPCIONES DE TAMAÑO.
 }
+
+// -------  MENU-FOOD ------- //
+
+const addFood = (fContainer, food, img, btn, addBtn) => {
+  const foodConteiner = document.getElementById(`${fContainer}`);
+    foodConteiner.classList.toggle('border-active');
+  const foodInfo = document.getElementById(`${food}`);
+    foodInfo.classList.toggle('hide-info');
+  const foodImg = document.getElementById(`${img}`)
+    foodImg.classList.toggle('full-img');
+  const foodBtn = document.getElementById(`${btn}`)
+      foodBtn.classList.toggle('hide-btn');
+      foodBtn.classList.toggle('btnAdd');
+  // setTimeout(
+  //   ()=>{
+  //   }
+  // , 500)
+  const foodAddBtn = document.getElementById(`${addBtn}`);
+  setTimeout(
+    ()=>{
+      foodAddBtn.classList.toggle('anim-btn');
+    }
+  , 100)
+}
