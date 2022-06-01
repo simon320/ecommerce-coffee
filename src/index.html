@@ -10,6 +10,8 @@
 </head>
 
 <body>
+
+<!-- NAVIGATION -------------------------------------------  -->
   <div class="navigation">
     <div class="menuToggle"></div>
     <ul> 
@@ -37,7 +39,7 @@
         </a>
       </li>
       <li class="list">
-        <a href="#">
+        <a href="#footer">
           <span class="icon">
             <ion-icon name="call-outline"></ion-icon>
           </span>
@@ -55,66 +57,63 @@
     </ul>
   </div>
   
+<!-- HEADER -------------------------------------------  -->
   <header>
-
-      <section class="home" id="home">
-          <h1 id="header">La hora de la felicidad!</h1>
+      <section class="home">
+          <h1>La hora de la felicidad!</h1>
           <p>
-            Es el momento que te tomas una pausa.. <br>
+            Es el momento que te tomas una pausa..
             Ya se desayunar, merendar o darte un gusto.
           </p>
           <div class="btn">
             <a href="#listProducts">Quiero Pedir!</a>
           </div>
       </section>
-
-
   </header>
 
-  
-    <section id="description" class="description">
-      <div class="principalWrapper">
-        <div>
-          <h2>¿Como pedir?</h2>
-          <span>Mira nuestra carta...</span>
-        </div>
-        <ul>
-          <li>
-            <div>
-              <img src="./assets/img/info-icon-1.png" alt="info" />
-            </div>
-            <p>Seleciona el o los productos...</p>
-          </li>
-          <li>
-            <div>
-              <img src="./assets/img/info-icon-2.png" alt="info" />
-            </div>
-            <p>Lo agregás al carrito...</p>
-          </li>
-          <li>
-            <div>
-              <img src="./assets/img/info-icon-3.png" alt="info" />
-            </div>
-            <p>
-              Le das al botón de compra <br />
-              Listo!<br />
-              Ya están camino a tu casa!
-            </p>
-          </li>
-        </ul>
+<!-- HOW BUY -------------------------------------------  --> 
+  <section id="description" class="description">
+    <div class="principalWrapper">
+      <div>
+        <h2>¿Como pedir?</h2>
+        <span>Mira nuestra carta...</span>
       </div>
-    </section>
+      <ul>
+        <li>
+          <div>
+            <img src="./assets/img/taza2.png" alt="info" />
+          </div>
+          <p>Elegi al para tomar...</p>
+        </li>
+        <li>
+          <div>
+            <img src="./assets/img/plato.png" alt="info" />
+          </div>
+          <p>Algo para comer...</p>
+        </li>
+        <li>
+          <div>
+            <img src="./assets/img/carro.png" alt="info" />
+          </div>
+          <p>
+            Le das al botón de compra y... <br />
+            Listo!<br />
+            El pedido esta camino a tu casa!
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-
-  <!-- PRODUCTs ------------------------------------------------------------------------>
-    <section class="listProducts" id="listProducts">
+<!-- PRODUCTS -------------------------------------------  -->
+    <section id="listProducts" class="listProducts">
       <div class="principalWrapper">
         <h2>Nuestros Productos</h2>
 
+        <h3 id="cafeteriaSection" class="title-article">Para tomar</h3>
+        
         <article class="cafeteria">
-          <h3>Cafeteria</h3>
-
-          <a href="#menu-1" id="btnClassics" class="container-items">
+          <a href="#cafeteriaSection" id="btnClassics" class="container-items">
             <span>Clasicos</span>
             <div id="closeClassics">
               <ion-icon name="chevron-forward-outline"></ion-icon>
@@ -340,7 +339,7 @@
             </ul>
           </div>
 
-          <a href="#menu-2" id="btnSpecials" class="container-items">
+          <a href="#btnSpecials" id="btnSpecials" class="container-items border-radius-bottom">
             <span>Especiales</span>
             <div id="closeSpecials">
               <ion-icon name="chevron-forward-outline"></ion-icon>
@@ -351,7 +350,7 @@
           </a>
 
           <div id="specials" class="container-details">
-            <ul>
+            <ul id="ulSpecials">
               <div class="container-coffee">
 
                 <div class="title-item">
@@ -401,7 +400,7 @@
         </article>
       </div>
 
-      <h3 class="title-article">Platos</h3>
+      <h3 class="title-article">Para comer</h3>
       <article class="food" onclick="addFood('BonjourMadameInfo', 'BonjourMadameImg', 'BonjourMadameBtn')">
         <div class="container-img">
           <img src="/src/assets/img/sandwich2.jpg" alt="" id="BonjourMadameImg">
@@ -491,60 +490,52 @@
 
     </section>
 
-
-
-    <section class="cartList" id="cartList">
-      <div class="principalWrapper">
-        <h2>Este es tu pedido!</h2>
-        <div class="cart-wrapper" id="cartWrapper">
-          <div class="emptyProductsMessage">
-            No elegiste nada aun...
-            ¿No tenés hambre?
-          </div>
-        </div>
-        <div class="total-items" id="totalItems">
-          <span>
-            <strong>Total:</strong>
-            <span id="totalProducts"></span>
-            $
-          </span>
+<!-- CART -------------------------------------------  -->
+  <section class="cartList" id="cartList">
+    <div class="principalWrapper">
+      <h2>Este es tu pedido!</h2>
+      <div class="cart-wrapper" id="cartWrapper">
+        <div class="emptyProductsMessage">
+          No elegiste nada aun...
+          ¿No tenés hambre?
         </div>
       </div>
-    </section>
+      <div class="total-items" id="totalItems">
+        <span>
+          <strong>Total:</strong>
+          <span id="totalItems"></span>
+          $
+        </span>
+      </div>
+    </div>
+  </section>
 
-
-
-    <footer>
-      <div class="principalWrapper">
-        <div class="title">
-          <h3>Coffee-Off</h3>
+<!-- FOOTER -------------------------------------------  -->
+  <footer id="footer">
+    <div class="principalWrapper">
+      <div class="title">
+        <h3>Coffee-Off</h3>
+      </div>
+      <section>
+        <div>
+          <h2>Contacto</h2>
+          <span>llamanos al 0303-456</span>
+          <span>Calle de algo 1234</span>
         </div>
-        <section>
-          <div>
-            <h2>Contacto</h2>
-            <span>llamanos al 0303-456</span>
-            <span>Calle de algo 1234</span>
-          </div>
-          <div>
-            <h2>Legales</h2>
-            <span> Cualquier cosa, yo no tuve la culpa </span>
-          </div>
-        </section>
-      </div>
-    </footer>
-    <!-- <a href="#top" class="pokeball">
-      <div>
-        <img src="./assets/img/pokeball.png" alt="" />
-      </div>
-    </a> -->
-  </main>
+        <div>
+          <h2>Legales</h2>
+          <span> Cualquier cosa, yo no tuve la culpa </span>
+        </div>
+      </section>
+    </div>
+  </footer>
 
-  <!-- function -->
+<!-- function -->
   <script src="./js/main.js"></script>
 
-  <!-- icons -->
+<!-- icons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
 
+</body>
 </html>

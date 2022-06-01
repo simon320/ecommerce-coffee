@@ -11,7 +11,7 @@ const setCount = () => {
     totalCount += products[i].count;
   }
 
-  totalItems.innerText = totalCount.toString();
+  
   return totalCount;
 };
 
@@ -21,7 +21,7 @@ const totalPrice = () => {
     for (const i in products) {
       totalCart += products[i].price * products[i].count;
     }
-    totalProducts.innerHTML = totalCart.toString();
+    totalItems.innerHTML = `<p>Total: $${totalCart.toString()}</p>`;
     return totalCart;
 };
 
@@ -78,39 +78,6 @@ item.addEventListener('click', activeList))
 
 
 
-// -------  ANIMATION ------- //
-
-// window.addEventListener('scroll', function(){
-//   // let animationHeader = document.getElementById('header');
-//   // let positionHeader = animationHeader.getBoundingClientRect().top;
-//   let animationHeader = document.getElementById('home');
-//   let windowPositionHeader = window.scrollY;
-
-//   if(windowPositionHeader === 0){
-//     animationHeader.style.animation = 'headerMove 1s ease-out';
-//   }
-// })
-
-// window.onscroll = function() {
-//   console.log("Vertical: " + window.scrollY);
-//   console.log("Horizontal: " + window.scrollX);
-  
-//   window.addEventListener('scroll', function(){
-//     // let animationHeader = document.getElementById('header');
-//     // let positionHeader = animationHeader.getBoundingClientRect().top;
-//     let animationHeader = document.getElementById('home');
-//     let windowPositionHeader = window.scrollY;
-  
-//     if(windowPositionHeader === 0){
-//       animationHeader.style.animation = 'headerMove 1s ease-out';
-//     }
-//   })
-// };
-
-
-
-
-
 // -------  CAFETERIA ------- //
 // -------  CLASICOs ------- //
 const classics = document.getElementById('classics');
@@ -122,12 +89,13 @@ btnClassics.addEventListener('click', () =>{
   openClassics.classList.toggle("hide"); // ALTERNA ENTRE LAS FLECHAS DEL MENU.
   closeClassics.classList.toggle("hide"); // ALTERNA ENTRE LAS FLECHAS DEL MENU.
 
-  classics.classList.toggle('up-hide');
+  classics.classList.toggle('up-hide-classics');
 
 });
 
 // -------  SPECIALs ------- //
 const specials = document.getElementById('specials');
+const ulSpecials = document.getElementById('ulSpecials');
 const btnSpecials = document.getElementById('btnSpecials');
 const openSpecials = document.getElementById('openSpecials');
 const closeSpecials = document.getElementById('closeSpecials');
@@ -135,8 +103,11 @@ const closeSpecials = document.getElementById('closeSpecials');
 btnSpecials.addEventListener('click', () =>{
   openSpecials.classList.toggle("hide");
   closeSpecials.classList.toggle("hide");
+  btnSpecials.classList.toggle("border-radius-bottom")
 
-  specials.classList.toggle('up-hide');
+  specials.classList.toggle('up-hide-specials');
+  specials.classList.toggle('border-radius-bottom');
+  ulSpecials.classList.toggle('border-radius-bottom');
 })
 // -------  ESPECIALs ------- //
 

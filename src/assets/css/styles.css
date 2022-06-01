@@ -31,17 +31,9 @@ main {
   height: 100%;
 }
 
-.pokeball div {
-  width: 4rem;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
 .title-article {
   font-size: 2rem;
-  margin: 2rem auto;
+  margin: 3.5rem auto .8rem;
 }
 
 ::-webkit-scrollbar {
@@ -58,37 +50,39 @@ body {
   display: none;
 }
 
-@-webkit-keyframes headerMove {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
-  }
-}
-
-@keyframes headerMove {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
-  }
-}
-
-@-webkit-keyframes showDetails {
+@-webkit-keyframes showDetailsClassics {
   0% {
     height: 0;
   }
   100% {
-    height: 325px;
+    height: 335px;
   }
 }
 
-@keyframes showDetails {
+@keyframes showDetailsClassics {
   0% {
     height: 0;
   }
   100% {
-    height: 325px;
+    height: 335px;
+  }
+}
+
+@-webkit-keyframes showDetailsSpecials {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 315px;
+  }
+}
+
+@keyframes showDetailsSpecials {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 315px;
   }
 }
 
@@ -295,51 +289,21 @@ body {
   display: none;
 }
 
+@media screen and (min-width: 800px) {
+  .navigation {
+    display: none;
+  }
+}
+
 header {
-  position: relative;
-  height: calc(100vh - 70px);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background-image: url(../img/coffee1b.jpg);
   background-size: cover;
-}
-
-header .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 2rem;
-  margin: 1rem;
-}
-
-header .logo img {
-  width: 1.8rem;
-}
-
-header .logo span {
-  margin-top: 8px;
-  margin-left: 5px;
-  color: #733727;
-  font-weight: 600;
-}
-
-header input {
-  width: 80%;
-  height: 35px;
-  margin: 0 10%;
-  border: none;
-  border-radius: 2rem;
-  -webkit-box-shadow: 1px 2px 5px #494949;
-          box-shadow: 1px 2px 5px #494949;
+  background-position: center;
+  border-bottom: 1px solid #000000;
 }
 
 header section {
@@ -354,8 +318,12 @@ header section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 40%;
   height: 100%;
+  min-height: 650px;
   padding-top: 350px;
   background: #000000;
 }
@@ -373,10 +341,10 @@ header section h1 {
 }
 
 header section p {
-  margin: 0 1rem;
+  margin: 1rem 1rem;
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #7e7a7a;
+  font-weight: 500;
+  color: #999999;
 }
 
 header section .btn {
@@ -393,30 +361,71 @@ header section .btn {
   width: 90%;
   padding: .8rem;
   border-radius: 1rem;
-  background: #733727;
+  background: #e4842b;
   text-align: center;
 }
 
 header section .btn a {
-  color: #e0dad3;
+  color: #ffffff;
   width: 100%;
   height: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 400px) {
+  .home h1 {
+    font-size: 5.8rem;
+  }
+  .home p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .home h1 {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    background-size: auto;
+    background-position: right;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    background-position: right;
+  }
+  header .home {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    background-size: 700px;
+  }
+  header .home .btn {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header .home h1 {
+    font-size: 8rem;
+    margin: 3rem;
+    line-height: 110px;
+  }
+  header .home p {
+    font-size: 2rem;
+    margin: 2rem 3rem;
+  }
 }
 
 .description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #242221;
   padding: 8rem 0;
 }
@@ -484,19 +493,14 @@ header section .btn a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 6rem;
-}
-
-@media (max-width: 1200px) {
-  .description ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 .description ul li {
@@ -514,27 +518,32 @@ header section .btn a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-
-@media (max-width: 1200px) {
-  .description ul li {
-    margin-bottom: 4rem;
-  }
+  margin-bottom: 4rem;
 }
 
 .description ul li div {
   width: 6rem;
 }
 
+.description ul li div img {
+  width: 7rem;
+}
+
 .description ul li p {
   color: #ffffff;
   margin-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
-@media (max-width: 1200px) {
-  .description ul li p {
-    font-size: 2rem;
+@media screen and (min-width: 700px) {
+  .description .principalWrapper span {
+    font-size: 3rem;
+  }
+  .description .principalWrapper img {
+    width: 12rem;
+  }
+  .description .principalWrapper p {
+    font-size: 3rem;
   }
 }
 
@@ -567,19 +576,28 @@ header section .btn a {
 }
 
 .listProducts h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #e4842b;
+  text-align: center;
+  margin: 2rem;
+  padding-bottom: 2.6rem;
+  border-bottom: 1px dashed #242221;
 }
 
 .listProducts .cafeteria {
   width: 100%;
-  border-top: 1px solid #242221;
   font-size: 2rem;
   text-align: center;
+  margin-bottom: 25vh;
 }
 
-.listProducts .cafeteria h3 {
-  margin: 2rem auto;
+.listProducts #btnClassics {
+  border-radius: 15px 15px 0 0;
+  margin-top: 2rem;
+}
+
+.listProducts .border-radius-bottom {
+  border-radius: 0 0 15px 15px;
 }
 
 .listProducts .container-items {
@@ -650,6 +668,59 @@ header section .btn a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.listProducts .container-details .container-coffee .title-item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.listProducts .container-details .container-coffee .title-item span {
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: 7px;
+}
+
+.listProducts .container-details .container-coffee .title-item button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 1.8rem;
+  background: #242221;
+  color: #dbd9d9;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 4px #af6622, -3px -3px 2px #db8c41, inset 1px 1px 4px #838383;
+          box-shadow: 2px 2px 4px #af6622, -3px -3px 2px #db8c41, inset 1px 1px 4px #838383;
+}
+
+.listProducts .container-details .container-coffee .title-item button:hover {
+  background: #575453;
+  border: 1px solid #000000;
 }
 
 .listProducts .container-details .container-coffee .container-size {
@@ -686,7 +757,7 @@ header section .btn a {
 
 .listProducts .container-details .container-coffee .container-size .container-size-details {
   position: absolute;
-  background: #ecebeb;
+  background: #eeeeee;
   left: calc(86px);
   padding-right: 45px;
   width: 90%;
@@ -704,7 +775,11 @@ header section .btn a {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  z-index: 5;
+  z-index: 90;
+  -webkit-box-shadow: 3px 5px 8px #642800;
+          box-shadow: 3px 5px 8px #642800;
+  border-bottom: 2px solid #000000;
+  border-left: 2px solid #000000;
 }
 
 .listProducts .container-details .container-coffee .container-size .container-size-details .li-btn {
@@ -717,14 +792,28 @@ header section .btn a {
   margin: 0 2rem;
   width: 40px;
   height: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #dbd9d9;
+  background: #646161;
   border-radius: 50%;
-  border: 3px solid #cccccc;
+  -webkit-box-shadow: 2px 2px 4px #a1a09f, -3px -3px 2px #ffffff, inset 2px 2px 4px #b3b2b2;
+          box-shadow: 2px 2px 4px #a1a09f, -3px -3px 2px #ffffff, inset 2px 2px 4px #b3b2b2;
+}
+
+.listProducts .container-details .container-coffee .container-size .container-size-details .li-btn .btn-close:hover {
+  background: #272727;
+  border: 3px solid #000000;
 }
 
 .listProducts .container-details .container-coffee .container-size .container-size-details .li-size {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -737,10 +826,32 @@ header section .btn a {
 }
 
 .listProducts .container-details .container-coffee .container-size .container-size-details .li-size button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 30px;
   height: 30px;
+  font-size: 1.8rem;
+  background: #242221;
+  color: #dbd9d9;
   border-radius: 50%;
-  border: 3px solid #dbd9d9;
+  -webkit-box-shadow: 2px 2px 4px #a1a09f, -3px -3px 2px #ffffff, inset 1px 1px 4px #838383;
+          box-shadow: 2px 2px 4px #a1a09f, -3px -3px 2px #ffffff, inset 1px 1px 4px #838383;
+}
+
+.listProducts .container-details .container-coffee .container-size .container-size-details .li-size button:hover {
+  background: #575453;
+  border: 1px solid #000000;
 }
 
 .listProducts .food {
@@ -748,7 +859,7 @@ header section .btn a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80vw;
+  width: 300px;
   height: 180px;
   overflow: hidden;
   margin: 1rem;
@@ -832,9 +943,14 @@ header section .btn a {
   margin: 1rem;
 }
 
-.listProducts .up-hide {
-  -webkit-animation: showDetails 1.2s normal forwards;
-          animation: showDetails 1.2s normal forwards;
+.listProducts .up-hide-classics {
+  -webkit-animation: showDetailsClassics 1.2s normal forwards;
+          animation: showDetailsClassics 1.2s normal forwards;
+}
+
+.listProducts .up-hide-specials {
+  -webkit-animation: showDetailsSpecials 1.2s normal forwards;
+          animation: showDetailsSpecials 1.2s normal forwards;
 }
 
 .listProducts .right-show {
@@ -1025,7 +1141,6 @@ header section .btn a {
       -ms-flex-pack: end;
           justify-content: flex-end;
   font-size: 1.6rem;
-  border-top: 1px solid #0c4ea2;
   margin-top: 2rem;
   padding-top: 1rem;
 }
@@ -1038,7 +1153,6 @@ header section .btn a {
       -ms-flex-pack: end;
           justify-content: flex-end;
   font-size: 1.6rem;
-  border-top: 1px solid #0c4ea2;
   margin-top: 2rem;
   padding-top: 1rem;
 }
