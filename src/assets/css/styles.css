@@ -206,7 +206,7 @@ body {
     border: 2px solid #e4842b;
   }
   100% {
-    border: 3px solid #e4842b;
+    border: 5px solid #e4842b;
   }
 }
 
@@ -218,7 +218,7 @@ body {
     border: 2px solid #e4842b;
   }
   100% {
-    border: 3px solid #e4842b;
+    border: 5px solid #e4842b;
   }
 }
 
@@ -307,7 +307,6 @@ header {
 }
 
 header section {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,15 +314,15 @@ header section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
   width: 40%;
   height: 100%;
-  min-height: 650px;
   padding-top: 350px;
   background: #000000;
 }
@@ -363,6 +362,10 @@ header section .btn {
   border-radius: 1rem;
   background: #e4842b;
   text-align: center;
+}
+
+header section .btn:hover {
+  border: 2px solid #fff;
 }
 
 header section .btn a {
@@ -407,9 +410,17 @@ header section .btn a {
 @media screen and (min-width: 1024px) {
   header {
     background-size: 700px;
+    height: 100vh;
+  }
+  header .home {
+    height: 100%;
+    padding-top: 25px;
+  }
+  header .home h1 {
+    font-size: 5rem;
   }
   header .home .btn {
-    width: 65%;
+    width: 35%;
   }
 }
 
@@ -464,28 +475,14 @@ header section .btn a {
 }
 
 .description div h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   color: #e4842b;
-}
-
-@media (max-width: 1200px) {
-  .description div h2 {
-    font-size: 10vw;
-  }
 }
 
 .description div span {
   color: #ffffff;
   font-size: 1.5rem;
-}
-
-@media (max-width: 1200px) {
-  .description div span {
-    font-size: 2rem;
-    margin-top: 4rem;
-    padding: 0 2rem;
-  }
 }
 
 .description ul {
@@ -500,6 +497,9 @@ header section .btn a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 6rem;
 }
 
@@ -529,21 +529,35 @@ header section .btn a {
   width: 7rem;
 }
 
-.description ul li p {
+.description p {
   color: #ffffff;
-  margin-top: 2rem;
   font-size: 2rem;
 }
 
 @media screen and (min-width: 700px) {
   .description .principalWrapper span {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+  .description .principalWrapper ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .description .principalWrapper img {
     width: 12rem;
   }
   .description .principalWrapper p {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -648,6 +662,7 @@ header section .btn a {
 
 .listProducts .container-details .container-coffee button {
   border: none;
+  cursor: pointer;
 }
 
 .listProducts .container-details .container-coffee button span {
@@ -671,6 +686,7 @@ header section .btn a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .listProducts .container-details .container-coffee .title-item div {
@@ -714,6 +730,7 @@ header section .btn a {
   background: #242221;
   color: #dbd9d9;
   border-radius: 50%;
+  cursor: pointer;
   -webkit-box-shadow: 2px 2px 4px #af6622, -3px -3px 2px #db8c41, inset 1px 1px 4px #838383;
           box-shadow: 2px 2px 4px #af6622, -3px -3px 2px #db8c41, inset 1px 1px 4px #838383;
 }
@@ -854,7 +871,7 @@ header section .btn a {
   border: 1px solid #000000;
 }
 
-.listProducts .food {
+section .food {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -863,25 +880,26 @@ header section .btn a {
   height: 180px;
   overflow: hidden;
   margin: 1rem;
-  border: 1px solid #e4842baf;
+  border: 5px solid #242221;
   border-radius: 10px;
   background: #f0eeee;
   -webkit-box-shadow: 2px 2px 6px #7e7a7a;
           box-shadow: 2px 2px 6px #7e7a7a;
   -webkit-transition: 2s all;
   transition: 2s all;
+  cursor: pointer;
 }
 
-.listProducts .food .container-img {
+section .food .container-img {
   width: 100%;
 }
 
-.listProducts .food .container-img img {
+section .food .container-img img {
   position: relative;
   width: 100%;
 }
 
-.listProducts .food .flex-container {
+section .food .flex-container {
   max-width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -900,21 +918,21 @@ header section .btn a {
   border-left: 1px solid #ff9f0f;
 }
 
-.listProducts .food .flex-container h3 {
+section .food .flex-container h3 {
   text-align: center;
 }
 
-.listProducts .food .flex-container span {
+section .food .flex-container span {
   color: #e4842b;
   padding: 5px;
 }
 
-.listProducts .food .flex-container p {
+section .food .flex-container p {
   font-size: .9rem;
-  padding: 5px;
+  padding: 8px;
 }
 
-.listProducts .food .btnAdd {
+section .food .btnAdd {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -931,7 +949,7 @@ header section .btn a {
   top: 0;
 }
 
-.listProducts .food .btnAdd button {
+section .food .btnAdd button {
   border: none;
   background: #ff8c20;
   border: #eeeeeeaf 1px solid;
@@ -943,44 +961,64 @@ header section .btn a {
   margin: 1rem;
 }
 
-.listProducts .up-hide-classics {
+@media screen and (min-width: 700px) {
+  .sectionFood {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.up-hide-classics {
   -webkit-animation: showDetailsClassics 1.2s normal forwards;
           animation: showDetailsClassics 1.2s normal forwards;
 }
 
-.listProducts .up-hide-specials {
+.up-hide-specials {
   -webkit-animation: showDetailsSpecials 1.2s normal forwards;
           animation: showDetailsSpecials 1.2s normal forwards;
 }
 
-.listProducts .right-show {
+.right-show {
   -webkit-animation: showDetails2 .5s normal forwards;
           animation: showDetails2 .5s normal forwards;
 }
 
-.listProducts .right-hide {
+.right-hide {
   -webkit-animation: hideDetails2 .5s normal forwards;
           animation: hideDetails2 .5s normal forwards;
 }
 
-.listProducts .hide-info {
+.hide-info {
   -webkit-animation: hideInfo .5s normal forwards;
           animation: hideInfo .5s normal forwards;
 }
 
-.listProducts .full-img {
+.full-img {
   -webkit-animation: imgCover .5s normal forwards;
           animation: imgCover .5s normal forwards;
 }
 
-.listProducts .show-btn {
+.show-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   opacity: 1;
 }
 
-.listProducts .cross {
+.cross {
   position: absolute;
   right: 0;
   top: 0;
@@ -990,17 +1028,17 @@ header section .btn a {
   font-weight: 500;
 }
 
-.listProducts .hide-btn {
+.hide-btn {
   display: none;
   opacity: 0;
 }
 
-.listProducts .anim-btn {
+.anim-btn {
   -webkit-animation: aniBtn .5s normal forwards;
           animation: aniBtn .5s normal forwards;
 }
 
-.listProducts .border-active {
+.border-active {
   -webkit-animation: borderActive .2s normal forwards;
           animation: borderActive .2s normal forwards;
 }
@@ -1026,10 +1064,9 @@ header section .btn a {
 }
 
 .cartList #totalItems {
-  position: absolute;
+  position: relative;
   top: 0;
-  background: #f01919;
-  color: #ffffff;
+  color: #242221;
 }
 
 .cartList .principalWrapper {
@@ -1051,12 +1088,7 @@ header section .btn a {
 .cartList h2 {
   font-size: 3.5rem;
   color: #e4842b;
-}
-
-@media (max-width: 1200px) {
-  .cartList h2 {
-    font-size: 10vw;
-  }
+  margin-bottom: 1rem;
 }
 
 .cartList p {
@@ -1065,24 +1097,34 @@ header section .btn a {
   margin: 1.5rem 0 2rem 0;
 }
 
-@media (max-width: 1200px) {
-  .cartList p {
-    font-size: 7vw;
-  }
+.cartList .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5rem auto;
+  width: 90%;
+  padding: .8rem;
+  border-radius: 1rem;
+  background: #e4842b;
+  text-align: center;
+}
+
+.cartList .btn:hover {
+  border: 2px solid #fff;
 }
 
 .cartList .cart-wrapper {
-  width: 70%;
+  width: 85%;
   background: #ffffff;
   padding: 2rem;
   border-radius: 1rem;
   color: #e4842b;
-}
-
-@media (max-width: 1200px) {
-  .cartList .cart-wrapper {
-    width: 90%;
-  }
 }
 
 .cartList .cart-wrapper .cart-item {
@@ -1110,6 +1152,7 @@ header section .btn a {
 }
 
 .cartList .cart-wrapper .cart-item-content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1124,9 +1167,25 @@ header section .btn a {
 
 .cartList .cart-wrapper .cart-item-content span {
   text-transform: capitalize;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-left: 1rem;
+}
+
+.cartList .cart-wrapper .cart-item-content .price-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cartList .cart-wrapper .item-img {
@@ -1155,6 +1214,37 @@ header section .btn a {
   font-size: 1.6rem;
   margin-top: 2rem;
   padding-top: 1rem;
+}
+
+.btnDelete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  background: #242221;
+  color: #dbd9d9;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 4px #b8b8b8, -3px -3px 2px #ffffff, inset 1px 1px 4px #838383;
+          box-shadow: 2px 2px 4px #b8b8b8, -3px -3px 2px #ffffff, inset 1px 1px 4px #838383;
+}
+
+.btnDelete:hover {
+  background: #575453;
+  border: 1px solid #000000;
 }
 
 .emptyProductsMessage {

@@ -4,6 +4,11 @@ const cartWrapper = document.getElementById("cartWrapper");
 
 let products = [];
 
+const saveLocalStorage = () => {
+  localStorage.setItem("productos", JSON.stringify(products));
+}
+
+
 const setCount = () => {
   let totalCount = 0;
 
@@ -11,34 +16,58 @@ const setCount = () => {
     totalCount += products[i].count;
   }
 
-  
   return totalCount;
 };
 
 const totalPrice = () => {
-    let totalCart = 0;
-  
+  let totalCart = 0;
     for (const i in products) {
       totalCart += products[i].price * products[i].count;
     }
+    localStorage.setItem("precio", JSON.stringify(totalCart));
+
     totalItems.innerHTML = `<p>Total: $${totalCart.toString()}</p>`;
     return totalCart;
 };
 
+
 const productsList = () => {
-  cartWrapper.innerHTML = products.map((product) => {
+  JSON.parse(localStorage.getItem("productos")) !== null && (products = JSON.parse(localStorage.getItem("productos")));
+  products.length == 0 ?
+    (cartWrapper.innerHTML =
+            `
+            <div class="emptyProductsMessage">
+              No elegiste nada aun...
+              ¿No tenés hambre?
+            </div>
+            `)
+  :
+  (cartWrapper.innerHTML = products.map((product) => {
     return `
             <div class="cart-item">
                 <div class="cart-item-content">
-                <span>${product.product}</span>
-                <span> $ ${product.price}</span>
-                <span>x ${product.count}</span>
-
+                  <span>${product.product}</span>
+                  <div class="price-amount">
+                    <span> $${product.price}</span>
+                    <span> x${product.count}</span>
                   </div>
+                </div>
+                <button class="btnDelete" onclick="deleteProduct('${product.product}')">X</button>
               </div>
             `
-  });
+  }))
 };
+
+productsList();
+totalPrice();
+
+
+const updateProduct = () => {
+  setCount();
+  totalPrice();
+  saveLocalStorage();
+  productsList();
+}
 
 const addProduct = (product, price, count, size) => {
 
@@ -46,18 +75,24 @@ const addProduct = (product, price, count, size) => {
       
         if (products[item].product === product) {
             products[item].count++;
-            setCount();
-            totalPrice();
-            productsList();
+            updateProduct();
             return;
         }
     }
 
     products.push({ product, price, count, size });
-    setCount();
-    totalPrice();
-    productsList();
+    updateProduct();
 };
+
+const deleteProduct = (product) => {
+
+  let newProductList = products.filter((item) => item.product !== product);
+  products = newProductList;
+
+  updateProduct();
+};
+
+
 
 // -------  NAVBAR ------- //
 
@@ -137,10 +172,7 @@ const addFood = (fContainer, food, img, btn, addBtn) => {
   const foodBtn = document.getElementById(`${btn}`)
       foodBtn.classList.toggle('hide-btn');
       foodBtn.classList.toggle('btnAdd');
-  // setTimeout(
-  //   ()=>{
-  //   }
-  // , 500)
+
   const foodAddBtn = document.getElementById(`${addBtn}`);
   setTimeout(
     ()=>{
@@ -148,3 +180,15 @@ const addFood = (fContainer, food, img, btn, addBtn) => {
     }
   , 100)
 }
+
+// -------  CART ------- //
+
+const buy = (x) => {
+  const buyContainer = document.getElementById("buyContainer");
+  buyContainer.innerHTML = `<button id="buyAlert" class="btn">COMPRAR</button>`;
+  const buyAlert = document.getElementById("buyAlert");
+  console.log(x)
+    buyAlert.addEventListener('click', () => {x.length !== 0 ? alert("Tu pedido llega en 15min!!") : alert("No arrmaste tu pedido aun!")});
+}
+
+buy(products);
