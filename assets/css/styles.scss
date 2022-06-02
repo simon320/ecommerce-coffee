@@ -1,5 +1,5 @@
 @import './variables/main';
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Ubuntu:wght@300;400;500;700&family=Pacifico&display=swap');
 @include resetStyles;
 
 ::-webkit-scrollbar {
@@ -105,6 +105,24 @@ body {
     }
 }
 
+@keyframes btnActive {
+    0% {
+        background:  #38291a;
+    }
+    25% {
+        background:  #794f27;
+    }
+    50% {
+        background:  #9e622a;
+    }
+    75% {
+        background:  #c77529;
+    }
+    100% {
+        background:  #e4842b;
+    }
+}
+
 // ------------ NAVIGATION MENU ------------------------------------------------------------ //
 .navigation {
     position: fixed;
@@ -160,6 +178,54 @@ body {
     }
 }
 
+// ------------ NAVIGATION MENU DESKTOP ------------------------------------------------------------ //
+.navigation-desktop {
+    display: none;
+    
+}
+@media screen and (min-width: 800px) {
+    
+    .navigation-desktop {
+        @include orderFlex(row, flex-end, center);
+        width: 100vw;
+        position: fixed;
+        right: 0;
+        z-index: 100;
+        
+        .menuDesktop {
+            @include orderFlex(row, flex-end, center);
+            right: 0;
+            width: 50vw;
+            height: 50px;
+            background: #af6622;
+            border-bottom-left-radius: 15px;
+
+            ul {
+                width: 100%;
+                @include orderFlex(row, space-around, center);
+                li {
+                    padding: 15px 0;
+                    &:hover {
+                        border-bottom: 1px solid #ffffff;
+                    }
+                }
+                a {
+                    color: #ffffff;
+                    font-size: 1.1rem;
+                    transition: all .5s;
+                    &:hover {
+                        font-size: 1.2rem;
+                        text-shadow: 0px 5px 4px #88511d;
+                    }
+
+                    .icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
 
 // ------------ HEADER ------------------------------------------------------------ //
 header {
@@ -208,7 +274,7 @@ header {
             background: #e4842b;
             text-align: center;
             &:hover {
-                border: 2px solid #fff;
+                outline: 2px solid #fff;
             }
             
             a {
@@ -368,10 +434,12 @@ header {
 }
 
 // PRODUCT ------------------------------------------
+// CAFETERIA ------------------------------------------
 
 .listProducts {
     display: flex;
     flex-direction: column;
+    padding-top: 5rem;
     align-items: center;
     background: #f1eae6c9;
 
@@ -407,13 +475,9 @@ header {
     }
 
     .container-items {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include orderFlex(row, space-between, center);
         padding: 1rem;
         font-size: 28px;
-
-
         color: #e0dad3;
         background: #242221;
 
@@ -481,6 +545,8 @@ header {
                         &:hover {
                             background: #575453;
                             border: 1px solid #000000;
+                        }&:active {
+                            animation: btnActive .1s normal ;
                         }
                     }
                 
@@ -514,6 +580,7 @@ header {
                 }
 
                 .container-size-details {
+                    @include orderFlex(column, space-around, center);
                     position: absolute;
                     background: #eeeeee;
                     left: calc(86px);
@@ -521,10 +588,6 @@ header {
                     width: 90%;
                     height: 325px;
                     overflow-y: hidden;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-around;
                     z-index: 90;
                     box-shadow: 3px 5px 8px #642800;
                     border-bottom: 2px solid #000000;
@@ -572,6 +635,9 @@ header {
                                 background: #575453;
                                 border: 1px solid #000000;
                             }
+                            &:active {
+                                animation: btnActive .1s normal ;
+                            }
                         }
                     }
                 }
@@ -579,6 +645,8 @@ header {
         }
     }
 }  
+
+
 section { 
     .food {
         position: relative;
@@ -745,11 +813,15 @@ section {
         margin: 1.5rem auto;
         width: 90%;
         padding: .8rem;
-        border-radius: 1rem;
+        border: 2px solid #fff;
         background: #e4842b;
+        border-radius: 1rem;
         text-align: center;
+        color: #ffffff;
+        font-size: large;
+        cursor: pointer;
         &:hover {
-            border: 2px solid #fff;
+            border: 2px solid rgb(15, 15, 15);
         }
     }
     .cart-wrapper {
@@ -845,21 +917,20 @@ section {
 
 footer {
     @include orderFlex(column, center, center);
-    padding: 8rem 0 4rem 0;
+    padding: 6rem 0 1rem 0;
     background: #242221;
     color: $main-white;
-    text-transform: uppercase;
 
     .principalWrapper {
         @include orderFlex(column, center, center);
     }
 
     .title {
-        @include imageSize(30rem, auto);
         margin-bottom: 4rem;
-
-        @media(max-width: 1200px) {
-            @include imageSize(70vw, auto);
+        h3 {
+            font-size: 5rem;
+            font-weight: 100;
+            font-family: 'Pacifico', cursive;
         }
     }
 
@@ -889,6 +960,16 @@ footer {
 
             span {
                 font-size: 1.5rem;
+            }
+        }
+
+        .containerNetworks {
+            @include orderFlex(row, center, center);
+            a {
+                color: #e0dad3;
+                font-size: 4rem;
+                margin: 0 2rem;
+                cursor: pointer;
             }
         }
     }

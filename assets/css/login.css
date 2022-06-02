@@ -1,0 +1,145 @@
+/*-----------LOGIN---------*/
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Ubuntu:wght@300;400;500;700&family=Pacifico&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'Ubuntu';
+    background: #242221;
+    background-image: url(/assets/img-login.jpg);
+    background-size: cover;
+    padding: 50px 0;
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.coffee-off {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 100;
+    font-family: 'Pacifico', cursive;
+    margin: 2rem 2rem;
+    padding: 2rem;
+}
+
+.flex-container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px;
+    width: 60vw;
+    padding: 15px 0;
+    margin: 0 2rem;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #ffffff10;
+    backdrop-filter: blur(10px);
+}
+
+.title {
+    align-self: center;
+
+}
+span {
+    margin: 15px;
+}
+
+.container-input {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    padding: 15px;
+}
+
+input {
+    display: block;
+    height: 40px;
+    width: 100%;
+    margin-top: 5px;
+    background: rgba(250, 250, 250, .1);
+    border-radius: 15px;
+    border: none;
+    border: 1px solid #e4842b;
+    padding-left: 15px;
+}
+input::placeholder {
+    color:#d3d3d3;
+}
+            
+
+        
+.container-terms {
+    display: flex;
+    justify-content: center;
+}
+            
+input {
+    width: auto;
+    align-self: center;
+}
+p {
+    align-self: center;
+    margin: 0 5px;
+}
+        
+            
+.container-buttons {
+    align-self: center;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+button {
+    display: inline-block;
+    background: #e4842b;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px 30px;
+    border: 2.5px solid #e4842b;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background .5s;
+}
+button:hover{
+background: none;
+    color: #fff;
+} 
+
+.showSignIn {
+    border-bottom: 2px solid #e4842b;
+    cursor: default;
+    display: inline-block;
+}
+
+.hideSignIn {
+    border-bottom: none;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+
+    
+
