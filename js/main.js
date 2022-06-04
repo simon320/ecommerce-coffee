@@ -3,7 +3,7 @@ const foodItems = [
   {
     name: 'Bonjour madame',
     price: '630',
-    description: 'Jamón, provolone, queso gratinado y salsa bechamel',
+    description: 'Jamón, provolone y queso gratinado',
     img: './assets/img/sandwich2.jpg',
     idContainer: 'BonjourMadameContainer',
     idImg: 'BonjourMadameImg',

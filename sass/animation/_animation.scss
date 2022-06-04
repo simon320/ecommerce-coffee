@@ -1,0 +1,106 @@
+// ------------ ANIMATION ------------------------------------------------------------ //
+@keyframes showDetailsClassics {
+    0%{
+        height: 0;
+    }
+
+    100%{
+        height: 335px;
+    }
+}
+
+@keyframes showDetailsSpecials {
+    0%{
+        height: 0;
+    }
+
+    100%{
+        height: 315px;
+    }
+}
+
+
+@keyframes showDetails2 {
+    0%{
+        left: calc(80vw);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes hideDetails2 {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: calc(80vw);
+    }
+}
+
+@keyframes hideInfo {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes imgCover {
+    50% {
+        top: 0;
+    }
+    100% {
+        top: -30px;
+        filter: blur(1.5px);
+    }
+}
+
+@keyframes aniBtn {
+    0% {
+        border: 1px solid #e4842b;
+    }
+    25% {
+        border: 3px solid #e4842b;
+    }
+    50% {
+        border: 6px solid #e4842b;
+    }
+    75% {
+        border: 3px solid #e4842b;
+    }
+    100% {
+        border: 1px solid #e4842b;
+    }
+}
+
+@keyframes borderActive {
+    0% {
+        border: 1px solid #e4842b;
+    }
+    50% {
+        border: 2px solid #e4842b;
+    }
+    100% {
+        border: 5px solid #e4842b;
+    }
+}
+
+@keyframes btnActive {
+    0% {
+        background:  #38291a;
+    }
+    25% {
+        background:  #794f27;
+    }
+    50% {
+        background:  #9e622a;
+    }
+    75% {
+        background:  #c77529;
+    }
+    100% {
+        background:  #e4842b;
+    }
+}

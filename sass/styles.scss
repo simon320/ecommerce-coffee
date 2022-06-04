@@ -1,0 +1,32 @@
+// VARIABLEs
+@import './variables/main';
+@include resetStyles;
+
+// ANIMATIONs
+@import './animation/animation';
+
+// FONTs
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Ubuntu:wght@300;400;500;700&family=Pacifico&display=swap');
+
+// SECTIONs
+@import './section/navigation';
+@import './section/header';
+@import './section/description';
+@import './section/product';
+@import './section/cart';
+@import './section/footer';
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: #fbfbfb;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.hide {
+    display: none;
+}

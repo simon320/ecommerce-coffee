@@ -120,7 +120,7 @@ formValidation.addEventListener('submit', (e) => {
         warningIn.innerHTML = `Bienvenido ${userCurrent[0]}`;
 
         setTimeout(()=> {
-            location.replace("../index.html")
+            location.replace("./home.html")
         }, 1500)
     }
 })

@@ -1,515 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-  <title> Coffee-Off </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <title>Coffee-0ff</title>
 </head>
-
 <body>
-
-<!-- NAVIGATION -------------------------------------------  -->
-  <div class="navigation">
-    <div class="menuToggle"></div>
-    <ul> 
-      <li class="list">
-        <a href="#">
-          <span class="icon">
-            <ion-icon name="home-outline"></ion-icon>
-          </span>
-          <span class="text">Home</span>
-        </a>
-      </li>
-      <li class="list">
-        <a href="#listProducts">
-          <span class="icon">
-            <ion-icon name="book-outline"></ion-icon>          </span>
-          <span class="text">Menu</span>
-        </a>
-      </li>
-      <li class="list">
-        <a href="#cartList">
-          <span class="icon">
-            <ion-icon name="bag-outline"></ion-icon>
-          </span>
-          <span class="text">Cart</span>
-        </a>
-      </li>
-      <li class="list">
-        <a href="#footer">
-          <span class="icon">
-            <ion-icon name="call-outline"></ion-icon>
-          </span>
-          <span class="text">Contact</span>
-        </a>
-      </li>
-      <li class="list">
-        <a href="#">
-          <span class="icon">
-            <ion-icon name="settings-outline"></ion-icon>
-          </span>
-          <span class="text">Option</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <!-- NAVIGATION DESKTOP -->
-  <div class="navigation-desktop">
-    <div class="menuDesktop">
-      <ul> 
-        <li class="list">
-          <a href="#">
-            <span class="icon">
-              <ion-icon name="home-outline"></ion-icon>
-            </span>
-            <span class="text">Inicio</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="#listProducts">
-            <span class="icon">
-              <ion-icon name="book-outline"></ion-icon>          </span>
-            <span class="text">Productos</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="#cartList">
-            <span class="icon">
-              <ion-icon name="bag-outline"></ion-icon>
-            </span>
-            <span class="text">Cart</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="#footer">
-            <span class="icon">
-              <ion-icon name="call-outline"></ion-icon>
-            </span>
-            <span class="text">Contact</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="./login.html">
-            <span class="icon">
-              <ion-icon name="person-outline"></ion-icon>
-            </span>
-            <span id="section" class="text">Cerrar sesión</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-<!-- HEADER -------------------------------------------  -->
-  <header>
-      <section class="home">
-          <h1>La hora de la felicidad!</h1>
-          <p>
-            Es el momento que te tomas una pausa..
-            Ya se desayunar, merendar o darte un gusto.
-          </p>
-          <div class="btn">
-            <a href="#listProducts">Quiero Pedir!</a>
-          </div>
-      </section>
-  </header>
-
-<!-- HOW BUY -------------------------------------------  --> 
-  <section id="description" class="description">
-    <div class="principalWrapper">
-      <div>
-        <h2>¿Como pedir?</h2>
-        <span>Mira nuestra carta...</span>
-      </div>
-      <ul>
-        <li>
-          <div>
-            <img src="./assets/img/taza.png" alt="info" />
-          </div>
-          <p>Elegi algo para tomar...</p>
-        </li>
-        <li>
-          <div>
-            <img src="./assets/img/plato.png" alt="info" />
-          </div>
-          <p>Algo para comer...</p>
-        </li>
-        <li>
-          <div>
-            <img src="./assets/img/carro.png" alt="info" />
-          </div>
-          <p>
-            Le das al botón de compra y... <br />
-          </p>
-        </li>
-        <li>
-        </li>
-      </ul>
-      <p>Listo!<br />
-        El pedido esta camino a tu casa!
-      </p>
-    </div>
-  </section>
-
-<!-- PRODUCTS -------------------------------------------  -->
-    <section id="listProducts" class="listProducts">
-      <div class="principalWrapper">
-        <h2>Nuestros Productos</h2>
-
-        <h3 id="cafeteriaSection" class="title-article">Para tomar</h3>
-        
-        <article class="cafeteria">
-          <a href="#cafeteriaSection" id="btnClassics" class="container-items">
-            <span>Clasicos</span>
-            <div id="closeClassics">
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-            </div>
-            <div id="openClassics" class="hide">
-              <ion-icon name="chevron-down-outline"></ion-icon>
-            </div>
-          </a>
-
-          <div id="classics" class="container-details">
-            <ul>
-              <div class="container-coffee">
-              <!-- CAFE -->
-                <button onclick="showSizes('coffeeSize')" class="title-item">
-                  <span>Cafe</span> 
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-                </button>
-
-                <div id="coffeeSize" class="container-size">
-                  <div class="title">
-                    <h3>Café</h3>
-                  </div>
-
-                  <ul class="container-size-details">
-                    <li class="li-btn">
-                      <button onclick="closeDetails('coffeeSize')" class="btn-close">X</button>
-                    </li>
-                    
-                    <li class="li-size">
-                      <span>S</span>
-                      <span>$150</span>
-                      <button onclick="addProduct('Cafe chico', 150, 1)">+</button>
-                    </li>
-                    <hr>
-                    <li class="li-size">
-                      <span>M</span>
-                      <span>$180</span>
-                      <button onclick="addProduct('Cafe mediano', 180, 1)">+</button>
-                    </li>
-                    <hr>
-                    <li class="li-size">
-                      <span>XL</span>
-                      <span>$200</span>
-                      <button onclick="addProduct('Cafe grande', 200, 1)">+</button>
-                    </li>
-                  </ul>
-                </div>
-
-              <!-- LAGRIMA -->
-                <button onclick="showSizes('tearSize')" class="title-item">
-                  <span>Lagrima</span> 
-                  <div id="closeTear">
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                  </div>
-                </button>
-
-                <div id="tearSize" class="container-size">
-                  <div class="title">
-                    <h3>Lágrima</h3>
-                  </div>
-
-                  <ul class="container-size-details">
-                    <li class="li-btn">
-                      <button onclick="closeDetails('tearSize')" class="btn-close">X</button>
-                    </li>
-                    <li class="li-size">
-                    <span>S</span>
-                    <span>$150</span>
-                    <button onclick="addProduct('Lagrima chica', 150, 1)">+</button>
-                  </li>
-                  <li class="li-size">
-                    <span>M</span>
-                    <span>$180</span>
-                    <button onclick="addProduct('Lagrima mediana', 180, 1)">+</button>
-                  </li>
-                  <li class="li-size">
-                    <span>XL</span>
-                    <span>$200</span>
-                    <button onclick="addProduct('Lagrima grande', 200, 1)">+</button>
-                  </li>
-                </ul>
-                </div>
-
-              <!-- CAFE CON LECHE -->
-                <button onclick="showSizes('coffeeMilkSize')" class="title-item">
-                  <span>Cafe con Leche</span> 
-                  <div id="closeCoffeeMilk">
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                  </div>
-                </button>
-
-                <div id="coffeeMilkSize" class="container-size">
-                  <div class="title">
-                    <h3>Cafe con Leche</h3>
-                  </div>
-
-                  <ul class="container-size-details">
-                    <li class="li-btn">
-                      <button onclick="closeDetails('coffeeMilkSize')" class="btn-close">X</button>
-                    </li>
-                    <li class="li-size">
-                      <span>S</span>
-                      <span>$150</span>
-                      <button onclick="addProduct('Cafe con leche chico', 150, 1)">+</button>
-                    </li>
-                    <li class="li-size">
-                      <span>M</span>
-                      <span>$180</span>
-                      <button onclick="addProduct('Cafe con leche mediano', 180, 1)">+</button>
-                    </li>
-                    <li class="li-size">
-                      <span>XL</span>
-                      <span>$200</span>
-                      <button onclick="addProduct('Cafe con leche grande', 200, 1)">+</button>
-                    </li>
-                  </ul>
-                </div>
-
-              <!-- CORTADO -->
-                <button onclick="showSizes('coffeeCutSize')" class="title-item">
-                  <span>Cortado</span> 
-                  <div id="closeCoffeeCut">
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                  </div>
-                </button>
-
-                <div id="coffeeCutSize" class="container-size">   
-                  <div class="title">
-                    <h3>Cortado</h3>
-                  </div>
-
-                  <ul class="container-size-details">
-                    <li class="li-btn">
-                      <button onclick="closeDetails('coffeeCutSize')" class="btn-close">X</button>
-                    </li>
-                    <li class="li-size">
-                      <span>S</span>
-                      <span>$150</span>
-                      <button onclick="addProduct('Cortado chico', 150, 1)">+</button>
-                    </li>
-                    <li class="li-size">
-                      <span>M</span>
-                      <span>$180</span>
-                      <button onclick="addProduct('Cortado mediano', 180, 1)">+</button>
-                    </li>
-                    <li class="li-size">
-                      <span>XL</span>
-                      <span>$200</span>
-                      <button onclick="addProduct('Cortado grande', 200, 1)">+</button>
-                    </li>
-                  </ul>
-                </div>
-
-              <!-- TE EN SAQUITO -->
-                <button onclick="showSizes('teaSize')" class="title-item">
-                  <span>Té en saquito</span> 
-                  <div id="closeTea">
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                  </div>
-                </button>
-
-                <div id="teaSize" class="container-size">
-                  <div class="title">
-                    <h3>Te en saquito</h3>
-                  </div>
-
-                  <ul class="container-size-details">
-                    <li class="li-btn">
-                      <button onclick="closeDetails('teaSize')" class="btn-close">X</button>
-                    </li>
-                    <li class="li-size">
-                      <span>S</span>
-                      <span>$150</span>
-                      <button onclick="addProduct('Té chico', 150, 1)">+</button>
-                    </li>
-                    <li class="li-size">
-                      <span>M</span>
-                      <span>$180</span>
-                      <button onclick="addProduct('Té mediano', 180, 1)">+</button>
-                    </li>
-                    <li class="li-size">
-                      <span>XL</span>
-                      <span>$200</span>
-                      <button onclick="addProduct('Té grande', 200, 1)">+</button>
-                    </li>
-                  </ul>
-                </div>
-
-              <!-- TE EN HEBRAS -->
-                <button onclick="showSizes('teaStrandSize')"  class="title-item">
-                  <span>Té en Hebras</span> 
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-                </button>
-
-                <div id="teaStrandSize" class="container-size">
-                  <div class="title">
-                    <h3>Te en hebras</h3>
-                  </div>
-
-                  <ul class="container-size-details">
-                    <li class="li-btn">
-                      <button onclick="closeDetails('teaStrandSize')" class="btn-close">X</button>
-                    </li>
-                    <li class="li-size">
-                      <span>S</span>
-                      <span>$150</span>
-                      <button onclick="addProduct('Té chico', 150, 1)">+</button>
-                    </li>
-                    <li class="li-size">
-                      <span>M</span>
-                      <span>$180</span>
-                      <button onclick="addProduct('Té mediano', 180, 1)">+</button>
-                    </li>
-                    <li class="li-size">
-                      <span>XL</span>
-                      <span>$200</span>
-                      <button onclick="addProduct('Té grande', 200, 1)">+</button>
-                    </li>
-                  </ul>
-                </div>
-
-              </div>
-            </ul>
-          </div>
-
-          <a href="#btnSpecials" id="btnSpecials" class="container-items border-radius-bottom">
-            <span>Especiales</span>
-            <div id="closeSpecials">
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-            </div>
-            <div id="openSpecials" class="hide">
-              <ion-icon name="chevron-down-outline"></ion-icon>
-            </div>
-          </a>
-
-          <div id="specials" class="container-details">
-            <ul id="ulSpecials">
-              <div class="container-coffee">
-
-                <div class="title-item">
-                  <span>Submarino</span> 
-                  <div>
-                    <span>$280</span>
-                    <button onclick="addProduct('Submarino', 280, 1)">+</button>
-                  </div>
-                </div>
-
-                <div class="title-item">
-                  <span>Chocolatada cindor</span> 
-                  <div>
-                    <span>$340</span>
-                    <button onclick="addProduct('Chocolatada cindor', 340, 1)">+</button>
-                  </div>
-                </div>
-
-                <div class="title-item">
-                  <span>Chocolatada vegana</span> 
-                  <div>
-                    <span>$370</span>
-                    <button onclick="addProduct('Chocolatada vegana', 370, 1)">+</button>
-                  </div>
-                </div>
-
-                <div class="title-item">
-                  <span>Capuccino</span> 
-                  <div>
-                    <span>$320</span>
-                    <button onclick="addProduct('Capuccino', 320, 1)">+</button>
-                  </div>
-                </div>
-
-                <div class="title-item">
-                  <span>Moka</span> 
-                  <div>
-                    <span>$320</span>
-                    <button onclick="addProduct('Moka', 320, 1)">+</button>
-                  </div>
-                </div>
-
-              </div>
-            </ul>
-          </div>
-
-        </article>
-      </div>
-
-      <h3 class="title-article">Para comer</h3>
-      <form id="formSearch" action="">
-        <input id="inputSearch" type="search">
-        <button type="submit"> Buscar</button>
-      </form>
-      <section class="sectionFood">
-
-        <div id="productSearch">
-          <!-- here rendering product food -->
+    <!-------------LOGIN--------------->
+<section id="loginSection" class="login">
+    <h1 class="coffee-off">Coffee-0ff</h1>
+ 
+    <form id="formValidation" class="flex-container-login">
+            
+        <div class="title">
+            <h3><span id="signUpTitle" class="selected">REGISTRARSE</span> | <span id="signInTitle" class="no-selected">ACCEDER</span></h3>
         </div>
-      </section>
-
-    </section>
-
-<!-- CART -------------------------------------------  -->
-  <section class="cartList" id="cartList">
-    <div class="principalWrapper">
-      <h2>Este es tu pedido!</h2>
-      <div class="cart-wrapper" id="cartWrapper">
-        <div class="emptyProductsMessage">
-          No elegiste nada aun...
-          ¿No tenés hambre?
+<!-- SIGN UP -->
+        <div id="signUpContent" class="container-input">
+            <label class="name" for="name">NOMBRE COMPLETO
+                <input id="newName" class="name" type="text" name="name" placeholder="Escriba aqui su nombre completo">
+            </label>
+            
+            <label for="e-mail">E-MAIL
+                <input id="newEmail" type="email" name="e-mail" placeholder="Ingrese aqui su correo electronico">
+            </label>
+            
+            <label for="password">CONTRASEÑA
+                <input id="newPassword" type="password" name="password" placeholder="Escriba aqui su contraseña">
+            </label>
+            
+            <div id="terms" class="container-terms">
+                <input id="termsCheck" type="checkbox">
+                <p>Acepto los terminos y condiciones</p>
+            </div>
+            <p id="warningUp"></p>
+            <button href="#productSection" type="submit" id="btnUp" class="buttons">CREAR</button>
         </div>
-      </div>
-      <div class="total-items" id="totalItems">
-      </div>
-      <div id="buyContainer"></div>
-    </div>
-  </section>
 
-<!-- FOOTER -------------------------------------------  -->
-  <footer id="footer">
-    <div class="principalWrapper">
-      <div class="title">
-        <h3 class="coffee-off">Coffee-0ff</h3>
-      </div>
-      <section>
-        <div class="containerContact">
-          <h2>Contacto</h2>
-          <span>2267-538688</span>
-          <span>Av. Las flores 1477</span>
+<!-- SIGN IN -->
+        <div id="signInContent" class="container-input hide">   
+            <label for="e-mail">E-MAIL
+                <input id="userEmail" type="email" name="e-mail" placeholder="Ingrese aqui su correo electronico">
+            </label>
+            
+            <label for="password">CONTRASEÑA
+                <input id="userPassword" type="password" name="password" placeholder="Escriba aqui su contraseña">
+            </label>
+            <p id="warningIn"></p>
+            <button href="#productSection" type="submit" id="btnIn" class="buttons">INGRESAR</button>
         </div>
-        <div>
-        <h2>Redes</h2>
-          <div class="containerNetworks">
-            <a href="./login.html"><ion-icon name="logo-facebook"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-          </div>
-        </div>
-      </section>
-    </div>
-  </footer>
+            
+    </form>
+    
+</section>
 
-<!-- function -->
-  <script src="./js/main.js"></script>
-
-<!-- icons -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+<script src="./js/login.js"></script>
 </body>
 </html>
