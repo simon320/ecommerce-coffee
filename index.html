@@ -93,7 +93,7 @@
           </a>
         </li>
         <li class="list">
-          <a href="#">
+          <a href="./login.html">
             <span class="icon">
               <ion-icon name="person-outline"></ion-icon>
             </span>
@@ -128,7 +128,7 @@
       <ul>
         <li>
           <div>
-            <img src="./assets/img/taza2.png" alt="info" />
+            <img src="./assets/img/taza.png" alt="info" />
           </div>
           <p>Elegi algo para tomar...</p>
         </li>
@@ -451,96 +451,15 @@
       </div>
 
       <h3 class="title-article">Para comer</h3>
+      <form id="formSearch" action="">
+        <input id="inputSearch" type="search">
+        <button type="submit"> Buscar</button>
+      </form>
       <section class="sectionFood">
-        <article id="BonjourMadameContainer" class="food" onclick="addFood('BonjourMadameContainer', 'BonjourMadameInfo', 'BonjourMadameImg', 'BonjourMadameBtn', 'BonjourMadameAddBtn')">
-          <div class="container-img">
-            <img src="./assets/img/sandwich2.jpg" alt="" id="BonjourMadameImg">
-          </div>
-          <div id="BonjourMadameInfo" class="flex-container">
-            <h3>Bonjour madame</h3>
-            <span>$630</span>
-            <p>Jamón, provolone, queso gratinado y salsa bechamel</p>
-          </div>
-          <div id="BonjourMadameBtn" class="hide-btn">
-            <button id="BonjourMadameAddBtn" onclick="addProduct('Bonjour madame', 630, 1)">Agregar</button>
-            <span class="cross">X</span>
-          </div>
-        </article>
 
-        <article id="PancakesContainer" class="food" onclick="addFood('PancakesContainer', 'PancakesInfo', 'PancakesImg', 'PancakesBtn', 'PancakesAddBtn')">
-          <div class="container-img">
-            <img src="./assets/img/panqueque.jpg" alt="" id="PancakesImg">
-          </div>
-          <div id="PancakesInfo" class="flex-container">
-            <h3>Pancakes</h3>
-            <span>$810</span>
-            <p>Chocolate y dulce de leche</p>
-          </div>
-          <div id="PancakesBtn" class="hide-btn">
-            <button id="PancakesAddBtn" onclick="addProduct('Pancakes', 810, 1)">Agregar</button>
-            <span class="cross">X</span>
-          </div>
-        </article>
-
-        <article id="PancakesFitContainer" class="food" onclick="addFood('PancakesFitContainer', 'PancakesFitInfo', 'PancakesFitImg', 'PancakesFitBtn', 'PancakesFitAddBtn')">
-          <div class="container-img">
-            <img src="./assets/img/panqueque2.jpg" alt="" id="PancakesFitImg">
-          </div>
-          <div id="PancakesFitInfo" class="flex-container">
-            <h3>Pancakes Fit</h3>
-            <span>$770</span>
-            <p>Maza integral con yogurt y frutas</p>
-          </div>
-          <div id="PancakesFitBtn" class="hide-btn">
-            <button id="PancakesFitAddBtn" onclick="addProduct('Pancakes Fit', 770, 1)">Agregar</button>
-            <span class="cross">X</span>
-          </div>
-        </article>
-
-        <article id="TostadasFrancesasContainer" class="food" onclick="addFood('TostadasFrancesasContainer', 'TostadasFrancesasInfo', 'TostadasFrancesasImg', 'TostadasFrancesasBtn', 'TostadasFrancesasAddBtn')">
-          <div class="container-img">
-            <img src="./assets/img/tostada.jpg" alt="" id="TostadasFrancesasImg">
-          </div>
-          <div id="TostadasFrancesasInfo" class="flex-container">
-            <h3>Tostadas francesas</h3>
-            <span>$810</span>
-            <p>Nutella y frutillas</p>
-          </div>
-          <div id="TostadasFrancesasBtn" class="hide-btn">
-            <button id="TostadasFrancesasAddBtn" onclick="addProduct('Tostadas francesas', 810, 1)">Agregar</button>
-            <span class="cross">X</span>
-          </div>
-        </article>
-
-        <article id="EnglishMuffinContainer" class="food" onclick="addFood('EnglishMuffinContainer', 'EnglishMuffinInfo', 'EnglishMuffinImg', 'EnglishMuffinBtn', 'EnglishMuffinAddBtn')">
-          <div class="container-img">
-            <img src="./assets/img/sandwich3.jpg" alt="" id="EnglishMuffinImg">
-          </div>
-          <div id="EnglishMuffinInfo" class="flex-container">
-            <h3>English muffin</h3>
-            <span>$710</span>
-            <p>Con cheddar, huevo y panceta/lomito</p>
-          </div>
-          <div id="EnglishMuffinBtn" class="hide-btn">
-            <button id="EnglishMuffinAddBtn" onclick="addProduct('English muffin', 710, 1)">Agregar</button>
-            <span class="cross">X</span>
-          </div>
-        </article>
-
-        <article id="MontecristoContainer" class="food" onclick="addFood('MontecristoContainer','MontecristoInfo', 'MontecristoImg', 'MontecristoBtn', 'MontecristoAddBtn')">
-          <div class="container-img">
-            <img src="./assets/img/sandwich4.jpg" alt="" id="MontecristoImg">
-          </div>
-          <div id="MontecristoInfo" class="flex-container">
-            <h3>Montecristo</h3>
-            <span>$800</span>
-            <p>Tostadas francesas con polvorone y jamón</p>
-          </div>
-          <div id="MontecristoBtn" class="hide-btn">
-            <button id="MontecristoAddBtn" onclick="addProduct('Montecristo', 800, 1)">Agregar</button>
-            <span class="cross">X</span>
-          </div>
-        </article>
+        <div id="productSearch">
+          <!-- here rendering product food -->
+        </div>
       </section>
 
     </section>

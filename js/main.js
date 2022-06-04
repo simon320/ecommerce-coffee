@@ -1,6 +1,117 @@
+
+const foodItems = [
+  {
+    name: 'Bonjour madame',
+    price: '630',
+    description: 'Jamón, provolone, queso gratinado y salsa bechamel',
+    img: './assets/img/sandwich2.jpg',
+    idContainer: 'BonjourMadameContainer',
+    idImg: 'BonjourMadameImg',
+    idInfo: 'BonjourMadameInfo',
+    idBtn: 'BonjourMadameBtn',
+    idAddBtn: 'BonjourMadameAddBtn',
+  },
+  {
+    name: 'Pancakes',
+    price: '810',
+    description: 'Chocolate y dulce de leche',
+    img: './assets/img/panqueque.jpg',
+    idContainer: 'PancakesContainer',
+    idImg: 'PancakesImg',
+    idInfo: 'PancakestInfo',
+    idBtn: 'PancakesBtn',
+    idAddBtn: 'PancakesAddBtn',
+  },
+  {
+    name: 'Pancakes Fit',
+    price: '770',
+    description: 'Maza integral con yogurt y frutas',
+    img: './assets/img/panqueque2.jpg',
+    idContainer: 'PancakesFitContainer',
+    idImg: 'PancakesFitImg',
+    idInfo: 'PancakesFitInfo',
+    idBtn: 'PancakesFitBtn',
+    idAddBtn: 'PancakesFitAddBtn',
+  },
+  {
+    name: 'Tostadas francesas',
+    price: '810',
+    description: 'Nutella y frutillas',
+    img: './assets/img/tostada.jpg',
+    idContainer: 'TostadasFrancesasContainer',
+    idImg: 'TostadasFrancesasImg',
+    idInfo: 'TostadasFrancesasInfo',
+    idBtn: 'TostadasFrancesasBtn',
+    idAddBtn: 'TostadasFrancesasAddBtn',
+  },
+  {
+    name: 'English muffin',
+    price: '710',
+    description: 'Con cheddar, huevo y panceta o lomito',
+    img: './assets/img/sandwich3.jpg',
+    idContainer: 'EnglishMuffinContainer',
+    idImg: 'EnglishMuffinImg',
+    idInfo: 'EnglishMuffinInfo',
+    idBtn: 'EnglishMuffinBtn',
+    idAddBtn: 'EnglishMuffinAddBtn',
+  },
+  {
+    name: 'Montecristo',
+    price: '800',
+    description: 'Tostadas francesas con polvorone y jamón',
+    img: './assets/img/sandwich4.jpg',
+    idContainer: 'MontecristoContainer',
+    idImg: 'MontecristoImg',
+    idInfo: 'MontecristoInfo',
+    idBtn: 'MontecristoBtn',
+    idAddBtn: 'MontecristoAddBtn'
+  }
+];
+
+// FOOD ************************************************************************
+const productSearch = document.getElementById("productSearch");
+const renderFood = (array) => productSearch.innerHTML = array.map((item) => {
+  return `
+      <article id="${item.idContainer}" class="food" onclick="addFood('${item.idContainer}','${item.idInfo}', '${item.idImg}', '${item.idBtn}', '${item.idAddBtn}')">
+        <div class="container-img">
+          <img src="${item.img}" alt="" id="${item.idImg}">
+        </div>
+        <div id="${item.idInfo}" class="flex-container">
+          <h3>${item.name}</h3>
+          <span>$${item.price}</span>
+          <p>${item.description}</p>
+        </div>
+        <div id="${item.idBtn}" class="hide-btn">
+          <button id="${item.idAddBtn}" onclick="addProduct('${item.name}', ${item.price}, 1)">Agregar</button>
+          <span class="cross">X</span>
+        </div>
+      </article>
+    `
+})
+
+renderFood(foodItems);
+// SEARCH ************************************************************************
+const formSearch = document.getElementById("formSearch");
+
+let arrayProductSearch = []
+
+formSearch.addEventListener('submit', (e)=>{
+  e.preventDefault()
+
+  arrayProductSearch = foodItems.filter(item => {
+    return item.name.toLowerCase().includes(inputSearch.value); 
+  })
+
+  inputSearch.value == "" ? renderFood(foodItems) : renderFood(arrayProductSearch);
+})
+
+
+
+// CART ************************************************************************
 const totalItems = document.getElementById("totalItems");
 const totalProducts = document.getElementById("totalProducts");
 const cartWrapper = document.getElementById("cartWrapper");
+const inputSearch = document.getElementById("inputSearch");
 
 let products = [];
 
@@ -42,25 +153,24 @@ const productsList = () => {
             </div>
             `)
   :
-  (cartWrapper.innerHTML = products.map((product) => {
-    return `
-            <div class="cart-item">
-                <div class="cart-item-content">
-                  <span>${product.product}</span>
-                  <div class="price-amount">
-                    <span> $${product.price}</span>
-                    <span> x${product.count}</span>
-                  </div>
-                </div>
-                <button class="btnDelete" onclick="deleteProduct('${product.product}')">X</button>
+    (cartWrapper.innerHTML = products.map((product) => {
+        return`
+          <div class="cart-item">
+            <div class="cart-item-content">
+              <span>${product.product}</span>
+              <div class="price-amount">
+                <span> $${product.price}</span>
+                <span> x${product.count}</span>
               </div>
-            `
-  }))
+            </div>
+            <button class="btnDelete" onclick="deleteProduct('${product.product}')">X</button>
+          </div>
+      `
+      }))
 };
 
 productsList();
 totalPrice();
-
 
 const updateProduct = () => {
   setCount();

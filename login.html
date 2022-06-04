@@ -11,39 +11,47 @@
     <!-------------LOGIN--------------->
 <section id="loginSection" class="login">
     <h1 class="coffee-off">Coffee-0ff</h1>
-
-    
-    <form class="flex-container-login">
+ 
+    <form id="formValidation" class="flex-container-login">
             
-    
         <div class="title">
-            <h3><span id="signUp">REGISTRARSE</span> | <span id="signIn">ACCEDER</span></h3>
+            <h3><span id="signUpTitle" class="selected">REGISTRARSE</span> | <span id="signInTitle" class="no-selected">ACCEDER</span></h3>
         </div>
-
-        <div class="container-input">
+<!-- SIGN UP -->
+        <div id="signUpContent" class="container-input">
             <label class="name" for="name">NOMBRE COMPLETO
-                <input class="name" type="text" name="name" placeholder="Escriba aqui su nombre completo">
+                <input id="newName" class="name" type="text" name="name" placeholder="Escriba aqui su nombre completo">
             </label>
             
             <label for="e-mail">E-MAIL
-                <input type="email" name="e-mail" placeholder="Ingrese aqui su correo electronico">
+                <input id="newEmail" type="email" name="e-mail" placeholder="Ingrese aqui su correo electronico">
             </label>
             
             <label for="password">CONTRASEÑA
-                <input type="password" name="password" placeholder="Escriba aqui su contraseña">
+                <input id="newPassword" type="password" name="password" placeholder="Escriba aqui su contraseña">
             </label>
             
             <div id="terms" class="container-terms">
-                <input type="checkbox">
-                <p>Acepto los <span>terminos y condiciones</span></p>
+                <input id="termsCheck" type="checkbox">
+                <p>Acepto los terminos y condiciones</p>
             </div>
+            <p id="warningUp"></p>
+            <button href="#productSection" type="submit" id="btnUp" class="buttons">CREAR</button>
         </div>
-        
-        <div class="container-buttons">
-            <button href="#productSection" class="buttons">CREAR</button>
-            <button href="#productSection" class="buttons">INGRESAR</button>
+
+<!-- SIGN IN -->
+        <div id="signInContent" class="container-input hide">   
+            <label for="e-mail">E-MAIL
+                <input id="userEmail" type="email" name="e-mail" placeholder="Ingrese aqui su correo electronico">
+            </label>
+            
+            <label for="password">CONTRASEÑA
+                <input id="userPassword" type="password" name="password" placeholder="Escriba aqui su contraseña">
+            </label>
+            <p id="warningIn"></p>
+            <button href="#productSection" type="submit" id="btnIn" class="buttons">INGRESAR</button>
         </div>
-        
+            
     </form>
     
 </section>

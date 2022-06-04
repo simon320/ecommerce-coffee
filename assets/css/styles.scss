@@ -212,7 +212,7 @@ body {
                 a {
                     color: #ffffff;
                     font-size: 1.1rem;
-                    transition: all .5s;
+                    transition: all .2s;
                     &:hover {
                         font-size: 1.2rem;
                         text-shadow: 0px 5px 4px #88511d;
@@ -259,7 +259,7 @@ header {
         p {
             margin: 1rem 1rem;
             font-size: 1.1rem;
-            font-weight: 500;
+            font-weight: 400;
             color: #999999;
         }
         
@@ -337,6 +337,7 @@ header {
 
             h1 {
                 font-size: 5rem;
+                margin: 2rem 3rem;
             }
             .btn {
                 width: 35%
@@ -417,11 +418,12 @@ header {
 @media screen and (min-width: 700px) {
     .description {
         .principalWrapper {
+            margin: 2.5rem;
             span {
                 font-size: 2rem;
             }
             ul {
-                @include orderFlex(row, space-between, center);
+                @include orderFlex(row, space-around, center);
             }
             img {
                 width: 12rem;
@@ -645,17 +647,36 @@ header {
         }
     }
 }  
-
+// FOOD ------------------------------------------
+form {
+    input {
+        border-radius: 15px;
+        padding: 5px;
+    }
+    button {
+        border: none;
+        border-radius: 18px;
+        padding: 8px;
+        background: #e4842b;
+        color: #fff;
+        &:hover {
+            background: #724821;
+        }
+    }
+}
 
 section { 
+
+    div {
+    
     .food {
         position: relative;
         display: flex;
         width: 300px;
-        height: 180px;
+        height: 175px;
         overflow: hidden;
         margin: 1rem;
-        border: 5px solid #242221;
+        border: 2px solid #838383;
         border-radius: 10px;
         background: #f0eeee;
         box-shadow: 2px 2px 6px #7e7a7a;
@@ -668,6 +689,7 @@ section {
             img {
                 position: relative;
                 width: 100%;
+                box-shadow: 3px 0 8px #646161;
             }
         }
 
@@ -675,20 +697,23 @@ section {
             max-width: 40%;
             @include orderFlex(column, space-between, flex-end);
             overflow: hidden;
-            border-left: 1px solid #ff9f0f;
+            box-shadow: inset 2px 0 4px #646161;
 
             h3 {
                 text-align: center;
+                padding: 4px;
             }
 
             span {
                 color: #e4842b;
+                font-weight: 500;
                 padding: 5px;
             }
 
             p {
-                font-size: .9rem;
-                padding: 8px;
+                font-size: 1rem;
+                padding: 11px;
+                color: #7e7a7a;
             }
 
         }
@@ -712,10 +737,12 @@ section {
                 padding: 1rem;
                 border-radius: 10px;
                 margin: 1rem;
+                cursor: pointer;
             }
 
         }
     }
+}
 }
 @media screen and (min-width: 700px) {
     .sectionFood {

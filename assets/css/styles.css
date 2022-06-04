@@ -399,8 +399,8 @@ body {
   .navigation-desktop .menuDesktop ul a {
     color: #ffffff;
     font-size: 1.1rem;
-    -webkit-transition: all .5s;
-    transition: all .5s;
+    -webkit-transition: all .2s;
+    transition: all .2s;
   }
   .navigation-desktop .menuDesktop ul a:hover {
     font-size: 1.2rem;
@@ -458,7 +458,7 @@ header section h1 {
 header section p {
   margin: 1rem 1rem;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #999999;
 }
 
@@ -534,6 +534,7 @@ header section .btn a {
   }
   header .home h1 {
     font-size: 5rem;
+    margin: 2rem 3rem;
   }
   header .home .btn {
     width: 35%;
@@ -651,6 +652,9 @@ header section .btn a {
 }
 
 @media screen and (min-width: 700px) {
+  .description .principalWrapper {
+    margin: 2.5rem;
+  }
   .description .principalWrapper span {
     font-size: 2rem;
   }
@@ -662,9 +666,8 @@ header section .btn a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1002,16 +1005,33 @@ header section .btn a {
           animation: btnActive .1s normal;
 }
 
-section .food {
+form input {
+  border-radius: 15px;
+  padding: 5px;
+}
+
+form button {
+  border: none;
+  border-radius: 18px;
+  padding: 8px;
+  background: #e4842b;
+  color: #fff;
+}
+
+form button:hover {
+  background: #724821;
+}
+
+section div .food {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 300px;
-  height: 180px;
+  height: 175px;
   overflow: hidden;
   margin: 1rem;
-  border: 5px solid #242221;
+  border: 2px solid #838383;
   border-radius: 10px;
   background: #f0eeee;
   -webkit-box-shadow: 2px 2px 6px #7e7a7a;
@@ -1021,16 +1041,18 @@ section .food {
   cursor: pointer;
 }
 
-section .food .container-img {
+section div .food .container-img {
   width: 100%;
 }
 
-section .food .container-img img {
+section div .food .container-img img {
   position: relative;
   width: 100%;
+  -webkit-box-shadow: 3px 0 8px #646161;
+          box-shadow: 3px 0 8px #646161;
 }
 
-section .food .flex-container {
+section div .food .flex-container {
   max-width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1046,24 +1068,28 @@ section .food .flex-container {
       -ms-flex-align: end;
           align-items: flex-end;
   overflow: hidden;
-  border-left: 1px solid #ff9f0f;
+  -webkit-box-shadow: inset 2px 0 4px #646161;
+          box-shadow: inset 2px 0 4px #646161;
 }
 
-section .food .flex-container h3 {
+section div .food .flex-container h3 {
   text-align: center;
+  padding: 4px;
 }
 
-section .food .flex-container span {
+section div .food .flex-container span {
   color: #e4842b;
+  font-weight: 500;
   padding: 5px;
 }
 
-section .food .flex-container p {
-  font-size: .9rem;
-  padding: 8px;
+section div .food .flex-container p {
+  font-size: 1rem;
+  padding: 11px;
+  color: #7e7a7a;
 }
 
-section .food .btnAdd {
+section div .food .btnAdd {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1080,7 +1106,7 @@ section .food .btnAdd {
   top: 0;
 }
 
-section .food .btnAdd button {
+section div .food .btnAdd button {
   border: none;
   background: #ff8c20;
   border: #eeeeeeaf 1px solid;
@@ -1090,6 +1116,7 @@ section .food .btnAdd button {
   padding: 1rem;
   border-radius: 10px;
   margin: 1rem;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 700px) {
