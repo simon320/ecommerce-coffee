@@ -47,7 +47,7 @@ const foodItems = [
   {
     name: 'English muffin',
     price: '710',
-    description: 'Con cheddar, huevo y panceta o lomito',
+    description: 'Con cheddar, huevo y panceta',
     img: './assets/img/sandwich3.jpg',
     idContainer: 'EnglishMuffinContainer',
     idImg: 'EnglishMuffinImg',
@@ -99,7 +99,7 @@ formSearch.addEventListener('submit', (e)=>{
   e.preventDefault()
 
   arrayProductSearch = foodItems.filter(item => {
-    return item.name.toLowerCase().includes(inputSearch.value); 
+    return item.name.toLowerCase().includes(inputSearch.value.toLowerCase()); 
   })
 
   inputSearch.value == "" ? renderFood(foodItems) : renderFood(arrayProductSearch);

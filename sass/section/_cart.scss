@@ -4,7 +4,7 @@
     @include orderFlex(column, center, center);
     padding: 8rem 0;
     text-align: center;
-    background: $main-gray;
+    background: #f3f3f3;
     position: relative;
 
     #totalItems {
@@ -49,10 +49,10 @@
     }
     .cart-wrapper {
         width: 85%;
-        background: $main-white;
+        background: #fff;
         padding: 2rem;
         border-radius: 1rem;
-        color: #e4842b;
+        color: #fff;
 
 
         .cart-item {

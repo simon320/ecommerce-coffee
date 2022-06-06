@@ -232,24 +232,25 @@ section {
     
     .productSearch {
         background: #242221;
-        width: 80vw;
+        width: 90vw;
         flex-wrap: wrap;
         @include orderFlex(row, center, center);
         border-radius: 15px;
         padding: 1rem;
         margin-top: 1rem;
+        color: #242221;
     
     .food {
         position: relative;
         display: flex;
-        width: 300px;
+        width: 320px;
         height: 175px;
         overflow: hidden;
         margin: 1rem;
         border: 2px solid #838383;
         border-radius: 10px;
         background: #f0eeee;
-        box-shadow: 2px 2px 6px #7e7a7a;
+        box-shadow: 2px 2px 6px #000000;
         transition: 2s all;
         cursor: pointer;
 

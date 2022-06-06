@@ -275,7 +275,7 @@ header {
       text-transform: uppercase;
       color: #e4842b; }
     .description div span {
-      color: #ffffff;
+      color: #fff;
       font-size: 1.5rem; }
   .description ul {
     width: 100%;
@@ -296,7 +296,7 @@ header {
         .description ul li div img {
           width: 7rem; }
   .description p {
-    color: #ffffff;
+    color: #fff;
     font-size: 2rem; }
 
 @media screen and (min-width: 700px) {
@@ -503,7 +503,7 @@ form button {
 
 section .productSearch {
   background: #242221;
-  width: 80vw;
+  width: 90vw;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
@@ -511,18 +511,19 @@ section .productSearch {
   align-items: center;
   border-radius: 15px;
   padding: 1rem;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  color: #242221; }
   section .productSearch .food {
     position: relative;
     display: flex;
-    width: 300px;
+    width: 320px;
     height: 175px;
     overflow: hidden;
     margin: 1rem;
     border: 2px solid #838383;
     border-radius: 10px;
     background: #f0eeee;
-    box-shadow: 2px 2px 6px #7e7a7a;
+    box-shadow: 2px 2px 6px #000000;
     transition: 2s all;
     cursor: pointer; }
     section .productSearch .food .container-img {
@@ -662,10 +663,10 @@ section .productSearch {
       border: 2px solid #0f0f0f; }
   .cartList .cart-wrapper {
     width: 85%;
-    background: #ffffff;
+    background: #fff;
     padding: 2rem;
     border-radius: 1rem;
-    color: #e4842b; }
+    color: #fff; }
     .cartList .cart-wrapper .cart-item {
       display: flex;
       justify-content: space-between;
@@ -738,7 +739,7 @@ footer {
   align-items: center;
   padding: 6rem 0 1rem 0;
   background: #242221;
-  color: #ffffff; }
+  color: #fff; }
   footer .principalWrapper {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,127 @@
+// VARIABLEs
+@import './variables/main';
+@include resetStyles;
+
+// ANIMATIONs
+@import './animation/animation';
+
+// FONTs
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Ubuntu:wght@300;400;500;700&family=Pacifico&display=swap');
+
+.hide {
+    display: none;
+}
+
+section {
+    background: #242221;
+    min-height: 100vh;
+    overflow-y: hidden;
+    padding: 2rem;
+
+    .back {
+        ion-icon {
+            float: left;
+            color: #e4842b;
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    .close-section {
+        position: relative;
+        float: right;
+        padding: 0 1rem;
+        height: 45px;
+        border: none;
+        border-radius: 20px;
+        background: #e4842b;
+        &:hover {
+            border: 1px solid #fff;
+        }
+    }
+
+    .container-info-profile {
+        padding-top: 15px;
+        background: #ffffff10;
+        height: 80vh;
+        border-radius: 15px;
+        h2 {
+            margin: 2rem 1rem;
+            font-size: 2rem;
+            color: #e4842b;
+        }
+        .container-data {
+            margin: 3rem 2rem;
+
+            p {
+                color: #e4842b;
+            }
+            .value {
+                color: #fff;
+            }
+        }
+    }
+
+    .coffee-off {
+        position: absolute;
+        z-index: 0;
+        color: #e4842b;
+        font-size: 3rem;
+        font-weight: 100;
+        font-family: 'Pacifico', cursive;
+        bottom: 20px;
+        margin: 1rem;
+    }
+}
+
+// MEDIA QUERIES
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+    section {
+        padding: 4rem;
+
+        .close-section {
+            position: relative;
+            float: right;
+            padding: 0 2rem;
+            height: 55px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+        }
+        .container-info-profile {
+            padding-top: 4rem;
+
+            h2 {
+                font-size: 3rem;
+            }
+            .container-data {
+                margin: 3rem 2rem;
+    
+                p {
+                    font-size: 2rem;
+                }
+                .value {
+                    color: #fff;
+                }
+            }
+        }
+        .coffee-off {
+            font-size: 4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section {
+
+        .container-info-profile {
+            width: 45vw;
+        }
+        .coffee-off {
+            position: absolute;
+            right: 0;
+            top: 20%;
+            margin: 4rem;
+            font-size: 6rem;
+        }
+    }
+}
