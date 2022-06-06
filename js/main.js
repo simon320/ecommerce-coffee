@@ -147,7 +147,7 @@ const productsList = () => {
   products.length == 0 ?
     (cartWrapper.innerHTML =
             `
-            <div class="emptyProductsMessage">
+            <div class="emptyProductsMessage cart-item-content">
               No elegiste nada aun...
               ¿No tenés hambre?
             </div>
